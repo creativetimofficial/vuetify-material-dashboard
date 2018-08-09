@@ -6717,11 +6717,6 @@ vue-analytics@^5.8.0:
   version "5.12.3"
   resolved "https://registry.yarnpkg.com/vue-analytics/-/vue-analytics-5.12.3.tgz#599bd05f9e69efd51645e9e74add81d8a26a88ea"
 
-vue-cli-plugin-vuetify-alpha@../vue-cli-plugin-vuetify-alpha/:
-  version "0.1.0"
-  dependencies:
-    rimraf "^2.6.2"
-
 vue-eslint-parser@^2.0.3:
   version "2.0.3"
   resolved "https://registry.yarnpkg.com/vue-eslint-parser/-/vue-eslint-parser-2.0.3.tgz#c268c96c6d94cfe3d938a5f7593959b0ca3360d1"
@@ -6785,9 +6780,9 @@ vue@^2.5.17:
   version "2.5.17"
   resolved "https://registry.yarnpkg.com/vue/-/vue-2.5.17.tgz#0f8789ad718be68ca1872629832ed533589c6ada"
 
-vuetify@^1.1.4:
-  version "1.1.10"
-  resolved "https://registry.yarnpkg.com/vuetify/-/vuetify-1.1.10.tgz#4a5c890f242e1cf84e318ccdf265a58928de76bb"
+vuetify@^1.2.0-beta.0:
+  version "1.2.0-beta.0"
+  resolved "https://registry.yarnpkg.com/vuetify/-/vuetify-1.2.0-beta.0.tgz#01f590fad755f13d18bbb70b95400fd362176671"
 
 vuex-router-sync@^5.0.0:
   version "5.0.0"
