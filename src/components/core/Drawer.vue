@@ -34,7 +34,7 @@
           v-for="(link, i) in links"
           :key="i"
           :to="link.to"
-          active-class="primary"
+          active-class="secondary"
           avatar
           class="mb-2"
         >

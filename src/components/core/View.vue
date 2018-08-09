@@ -1,7 +1,6 @@
 <template>
   <v-content>
-    <v-container
-      fluid>
+    <v-container id="core-view">
       <v-fade-transition mode="out-in">
         <router-view />
       </v-fade-transition>
@@ -14,8 +13,14 @@
 export default {
   metaInfo () {
     return {
-      titleTemplate: '%s — Material Design'
+      title: 'Vue Material Dashboard by CreativeTim'
     }
   }
 }
 </script>
+
+<style>
+#core-view {
+  padding-bottom: 128px;
+}
+</style>
