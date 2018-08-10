@@ -40,7 +40,7 @@ export default {
 <style>
 .v-offset {
   margin: 0 auto;
-  max-width: 90%;
+  max-width: calc(100% - 32px);
   position: relative;
 }
 .v-offset--full-width {
