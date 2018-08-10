@@ -1,12 +1,10 @@
 <template>
   <v-card
     v-bind="$attrs"
-    :style="{
-      marginBottom: `${offset}px`,
-      marginTop: `${offset}px`
-    }"
+    :style="styles"
   >
     <helper-offset
+      v-if="$slots.offset"
       :full-width="fullWidth"
       :offset="offset"
     >
@@ -30,6 +28,17 @@ export default {
     offset: {
       type: [Number, String],
       default: 32
+    }
+  },
+
+  computed: {
+    styles () {
+      if (!this.$slots.offset) return null
+
+      return {
+        marginBottom: `${this.offset}px`,
+        marginTop: `${this.offset}px`
+      }
     }
   }
 }

@@ -86,12 +86,15 @@
                 </v-flex>
                 <v-flex
                   xs12
-                  text-xs-right>
+                  text-xs-right
+                >
                   <v-btn
                     large
                     class="mx-0 font-weight-light"
                     color="secondary"
-                  >Update Profile</v-btn>
+                  >
+                    Update Profile
+                  </v-btn>
                 </v-flex>
               </v-layout>
             </v-container>
