@@ -2,9 +2,9 @@
   <v-toolbar
     id="core-toolbar"
     app
-    color="transparent"
     flat
     prominent
+    style="background: #fafafa;"
   >
     <v-toolbar-title
       class="tertiary--text font-weight-light"

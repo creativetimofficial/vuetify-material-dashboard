@@ -1,15 +1,17 @@
 <template>
   <v-card
+    v-bind="$attrs"
     :style="{
+      marginBottom: `${offset}px`,
       marginTop: `${offset}px`
     }"
-    class="mb-5"
   >
-    <div
-      :style="styles"
-      class="v-card__offset">
+    <helper-offset
+      :full-width="fullWidth"
+      :offset="offset"
+    >
       <slot name="offset" />
-    </div>
+    </helper-offset>
     <v-card-text>
       <slot />
     </v-card-text>
@@ -21,26 +23,14 @@ export default {
   inheritAttrs: false,
 
   props: {
+    fullWidth: {
+      type: Boolean,
+      default: false
+    },
     offset: {
       type: [Number, String],
       default: 32
     }
-  },
-
-  computed: {
-    styles () {
-      return {
-        marginBottom: `${-Number(this.offset)}px`,
-        top: `${-Number(this.offset)}px`
-      }
-    }
   }
 }
 </script>
-
-<style>
-.v-card__offset {
-  padding: 16px;
-  position: relative;
-}
-</style>

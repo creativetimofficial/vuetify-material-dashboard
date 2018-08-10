@@ -1,10 +1,10 @@
 <template>
   <v-content>
-    <v-container id="core-view">
+    <div id="core-view">
       <v-fade-transition mode="out-in">
         <router-view />
       </v-fade-transition>
-    </v-container>
+    </div>
     <core-footer />
   </v-content>
 </template>
@@ -21,6 +21,6 @@ export default {
 
 <style>
 #core-view {
-  padding-bottom: 128px;
+  padding-bottom: 1148px;
 }
 </style>

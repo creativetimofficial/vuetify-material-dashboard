@@ -14,11 +14,12 @@
     >
       <v-list
         class="pa-3 fill-height"
-        style="background: rgba(0, 0, 0, 0.7;"
+        style="background: rgba(0, 0, 0, 0.7);"
       >
         <v-list-tile avatar>
           <v-list-tile-avatar
-            color="white">
+            color="white"
+          >
             <v-img
               src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Vue.js_Logo.svg/400px-Vue.js_Logo.svg.png"
               height="32"
@@ -29,7 +30,8 @@
           <v-list-tile-title class="title font-weight-light">VUE MD</v-list-tile-title>
         </v-list-tile>
         <v-divider
-          class="mt-2 mb-4"/>
+          class="mt-2 mb-4"
+        />
         <v-list-tile
           v-for="(link, i) in links"
           :key="i"

@@ -1,10 +1,16 @@
 <template>
-  <v-container fill-height>
+  <v-container
+    fill-height
+    fluid
+    grid-list-xl>
     <v-layout
       justify-center
-      align-center
+      wrap
     >
-      <v-flex xs12>
+      <v-flex
+        xs12
+        md8
+      >
         <material-card>
           <v-card
             slot="offset"
@@ -91,6 +97,11 @@
             </v-container>
           </v-form>
         </material-card>
+      </v-flex>
+      <v-flex
+        xs12
+        md4
+      >
         <material-card offset="64">
           <v-avatar
             slot="offset"
