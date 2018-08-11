@@ -18,7 +18,7 @@
             class="pa-3"
           >
             <div class="title font-weight-light mb-2">Simple Table</div>
-            <div class="subheading font-weight-thin grey--text text--lighten-2">Here is a subtitle for this table</div>
+            <div class="subheading font-weight-thin grey--text text--lighten-3">Here is a subtitle for this table</div>
           </div>
 
           <v-data-table
@@ -64,7 +64,7 @@
           >
             <div class="pa-3">
               <div class="title font-weight-light mb-2">Table on Plain Background</div>
-              <div class="subheading font-weight-thin grey--text text--lighten-2">Here is a subtitle for this table</div>
+              <div class="subheading font-weight-thin grey--text text--lighten-3">Here is a subtitle for this table</div>
             </div>
           </v-card>
 

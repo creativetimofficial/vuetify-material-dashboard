@@ -53,8 +53,9 @@
           />
         </v-list-tile>
         <v-list-tile
+          active-class="secondary"
           class="v-list__tile--buy"
-          @click="() => {}"
+          to="/upgrade"
         >
           <v-list-tile-action>
             <v-icon>mdi-package-up</v-icon>
@@ -139,10 +140,6 @@ export default {
 
       &--buy {
         margin-top: auto;
-
-        .v-list__tile {
-          background: #4caf50;
-        }
       }
     }
   }
