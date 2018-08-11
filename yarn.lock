@@ -6013,12 +6013,6 @@ sass-loader@^7.1.0:
     pify "^3.0.0"
     semver "^5.5.0"
 
-sass@^1.10.4:
-  version "1.10.4"
-  resolved "https://registry.yarnpkg.com/sass/-/sass-1.10.4.tgz#3dbbb000b868ec13cb95a6a2f1ab8e877688f50d"
-  dependencies:
-    chokidar "^2.0.0"
-
 sax@0.5.x:
   version "0.5.8"
   resolved "https://registry.yarnpkg.com/sax/-/sax-0.5.8.tgz#d472db228eb331c2506b0e8c15524adb939d12c1"
