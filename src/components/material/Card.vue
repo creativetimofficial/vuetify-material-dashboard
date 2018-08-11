@@ -6,6 +6,7 @@
   >
     <helper-offset
       v-if="$slots.header || $slots.offset"
+      :inline="inline"
       :full-width="fullWidth"
       :offset="offset"
     >
@@ -52,6 +53,10 @@ export default {
       type: [Number, String],
       default: 10
     },
+    inline: {
+      type: Boolean,
+      default: false
+    },
     fullWidth: {
       type: Boolean,
       default: false
@@ -82,26 +87,6 @@ export default {
     &__header {
       &.v-card {
         border-radius: 4px;
-      }
-
-      .ct-label {
-        color: inherit;
-        font-size: 0.975rem;
-        font-weight: 100;
-      }
-
-      .ct-grid{
-        stroke: rgba(255, 255, 255, 0.2);
-      }
-      .ct-series-a .ct-point,
-      .ct-series-a .ct-line,
-      .ct-series-a .ct-bar,
-      .ct-series-a .ct-slice-donut {
-          stroke: rgba(255,255,255,.8);
-      }
-      .ct-series-a .ct-slice-pie,
-      .ct-series-a .ct-area {
-          fill: rgba(255,255,255,.4);
       }
     }
   }

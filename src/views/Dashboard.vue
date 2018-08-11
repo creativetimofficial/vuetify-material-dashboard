@@ -106,6 +106,176 @@
       </v-flex>
       <v-flex
         xs12
+        sm6
+        md4
+        lg3
+      >
+        <material-stats-card
+          icon="mdi-store"
+          title="Revenue"
+          value="$34,245"
+          sub-icon="mdi-calendar"
+          sub-text="Last 24 Hours"
+        />
+      </v-flex>
+      <v-flex
+        xs12
+        sm6
+        md4
+        lg3
+      >
+        <material-stats-card
+          color="orange"
+          icon="mdi-content-copy"
+          title="Used Space"
+          value="49/50 GB"
+          sub-icon="mdi-alert"
+          sub-icon-color="error"
+          sub-text="Get More Space..."
+        />
+      </v-flex>
+      <v-flex
+        xs12
+        sm6
+        md4
+        lg3
+      >
+        <material-stats-card
+          color="error"
+          icon="mdi-information-outline"
+          title="Fixed Issues"
+          value="75"
+          sub-icon="mdi-tag"
+          sub-text="Tracked from Github"
+        />
+      </v-flex>
+      <v-flex
+        xs12
+        sm6
+        md4
+        lg3
+      >
+        <material-stats-card
+          color="cyan"
+          icon="mdi-twitter"
+          title="Followers"
+          value="+245"
+          sub-icon="mdi-update"
+          sub-text="Just Updated"
+        />
+      </v-flex>
+      <v-flex
+        xs12
+        sm6
+      >
+        <material-card>
+          <v-flex
+            slot="header"
+            py-3
+            px-4
+          >
+            <v-tabs
+              v-model="tabs"
+              color="transparent"
+              slider-color="white"
+            >
+              <span
+                class="subheading font-weight-light mr-3"
+                style="align-self: center"
+              >Tasks:</span>
+              <v-tab class="mr-3">
+                <v-icon class="mr-3">mdi-bug</v-icon>
+                Bugs
+              </v-tab>
+              <v-tab class="mr-3">
+                <v-icon class="mr-3">mdi-code-tags</v-icon>
+                Website
+              </v-tab>
+              <v-tab>
+                <v-icon class="mr-3">mdi-cloud</v-icon>
+                Server
+              </v-tab>
+            </v-tabs>
+          </v-flex>
+
+          <v-tabs-items v-model="tabs">
+            <v-tab-item
+              v-for="n in 3"
+              :key="n"
+            >
+              <v-list three-line>
+                <v-list-tile @click="complete(0)">
+                  <v-list-tile-action>
+                    <v-checkbox
+                      :value="list[0]"
+                      color="green"
+                    />
+                  </v-list-tile-action>
+                  <v-list-tile-title>
+                    Sign contract for "What are conference organized afraid of?"
+                  </v-list-tile-title>
+                  <div class="d-flex">
+                    <v-btn
+                      icon
+                    >
+                      <v-icon color="primary">mdi-pencil</v-icon>
+                    </v-btn>
+                    <v-btn icon>
+                      <v-icon color="error">mdi-close</v-icon>
+                    </v-btn>
+                  </div>
+                </v-list-tile>
+                <v-divider/>
+                <v-list-tile @click="complete(1)">
+                  <v-list-tile-action>
+                    <v-checkbox
+                      :value="list[1]"
+                      color="green"
+                    />
+                  </v-list-tile-action>
+                  <v-list-tile-title>
+                    Lines From Great Russian Literature? Or E-mails From My Boss?
+                  </v-list-tile-title>
+                  <div class="d-flex">
+                    <v-btn
+                      icon
+                    >
+                      <v-icon color="primary">mdi-pencil</v-icon>
+                    </v-btn>
+                    <v-btn icon>
+                      <v-icon color="error">mdi-close</v-icon>
+                    </v-btn>
+                  </div>
+                </v-list-tile>
+                <v-divider/>
+                <v-list-tile @click="complete(2)">
+                  <v-list-tile-action>
+                    <v-checkbox
+                      :value="list[2]"
+                      color="green"
+                    />
+                  </v-list-tile-action>
+                  <v-list-tile-title>
+                    Flooded: One year later, assessing what was lost and what was found when a ravaging rain swept through metro Detroit
+                  </v-list-tile-title>
+                  <div class="d-flex">
+                    <v-btn
+                      icon
+                    >
+                      <v-icon color="primary">mdi-pencil</v-icon>
+                    </v-btn>
+                    <v-btn icon>
+                      <v-icon color="error">mdi-close</v-icon>
+                    </v-btn>
+                  </div>
+                </v-list-tile>
+              </v-list>
+            </v-tab-item>
+          </v-tabs-items>
+        </material-card>
+      </v-flex>
+      <v-flex
+        xs12
         md6
       >
         <material-card color="orange">
@@ -289,7 +459,18 @@ export default {
           city: 'Gloucester',
           salary: '$78,615'
         }
-      ]
+      ],
+      tabs: 0,
+      list: {
+        0: false,
+        1: false,
+        2: false
+      }
+    }
+  },
+  methods: {
+    complete (index) {
+      this.list[index] = !this.list[index]
     }
   }
 }
