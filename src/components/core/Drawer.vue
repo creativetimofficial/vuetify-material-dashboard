@@ -12,9 +12,11 @@
       height="100%"
       src="https://demos.creative-tim.com/vue-material-dashboard/img/sidebar-2.32103624.jpg"
     >
-      <v-list
+      <v-layout
         class="pa-3 fill-height"
         style="background: rgba(0, 0, 0, 0.7);"
+        tag="v-list"
+        column
       >
         <v-list-tile avatar>
           <v-list-tile-avatar
@@ -27,7 +29,9 @@
               class="mt-1"
             />
           </v-list-tile-avatar>
-          <v-list-tile-title class="title font-weight-light">VUE MD</v-list-tile-title>
+          <v-list-tile-title class="title font-weight-light">
+            VUE MD
+          </v-list-tile-title>
         </v-list-tile>
         <v-divider
           class="mt-2 mb-4"
@@ -48,7 +52,18 @@
             v-text="link.text"
           />
         </v-list-tile>
-      </v-list>
+        <v-list-tile
+          class="v-list__tile--buy"
+          @click="() => {}"
+        >
+          <v-list-tile-action>
+            <v-icon>mdi-package-up</v-icon>
+          </v-list-tile-action>
+          <v-list-tile-title class="font-weight-light">
+            Upgrade To PRO
+          </v-list-tile-title>
+        </v-list-tile>
+      </v-layout>
     </v-img>
   </v-navigation-drawer>
 </template>
@@ -117,8 +132,18 @@ export default {
 }
 </script>
 
-<style>
-  #app-drawer .v-list__tile {
-    border-radius: 4px;
+<style lang="scss">
+  #app-drawer {
+    .v-list__tile {
+      border-radius: 4px;
+
+      &--buy {
+        margin-top: auto;
+
+        .v-list__tile {
+          background: #4caf50;
+        }
+      }
+    }
   }
 </style>
