@@ -1,30 +1,25 @@
 <template>
   <v-container
     fill-height
-    fluid
     style="flex-wrap: wrap;"
   >
     <material-card>
-      <v-card
-        slot="offset"
-        color="secondary"
-        class="elevation-10"
-        dark
+      <div
+        slot="header"
+        class="pa-3"
       >
-        <div class="pa-3">
-          <div class="title font-weight-light mb-2">Material Design Icons</div>
-          <div class="subheading font-weight-thin grey--text text--lighten-2">
-            See all available
-            <a
-              class="white--text"
-              href="https://materialdesignicons.com/"
-              target="_blank"
-            >
-              Icons
-            </a>
-          </div>
+        <div class="title font-weight-light mb-2">Material Design Icons</div>
+        <div class="subheading font-weight-thin grey--text text--lighten-3">
+          See all available
+          <a
+            class="white--text"
+            href="https://materialdesignicons.com/"
+            target="_blank"
+          >
+            Icons
+          </a>
         </div>
-      </v-card>
+      </div>
 
       <v-layout
         align-center

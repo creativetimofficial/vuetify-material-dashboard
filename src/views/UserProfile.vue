@@ -12,17 +12,13 @@
         md8
       >
         <material-card>
-          <v-card
-            slot="offset"
-            color="secondary"
-            class="elevation-10"
-            dark
+          <div
+            slot="header"
+            class="pa-3"
           >
-            <div class="pa-3">
-              <div class="title font-weight-light mb-2">Edit Profile</div>
-              <div class="subheading font-weight-thin grey--text text--lighten-2">Complete your profile</div>
-            </div>
-          </v-card>
+            <div class="title font-weight-light mb-2">Edit Profile</div>
+            <div class="subheading font-weight-thin grey--text text--lighten-3">Complete your profile</div>
+          </div>
 
           <v-form>
             <v-container py-0>
@@ -109,7 +105,8 @@
           <v-avatar
             slot="offset"
             class="mx-auto d-block"
-            size="148">
+            size="148"
+          >
             <img
               class="elevation-10"
               src="https://demos.creative-tim.com/vue-material-dashboard/img/marc.aba54d65.jpg"

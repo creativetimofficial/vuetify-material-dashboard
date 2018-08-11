@@ -13,17 +13,13 @@
         md6
       >
         <material-card>
-          <v-card
-            slot="offset"
-            color="secondary"
-            class="elevation-10"
-            dark
+          <div
+            slot="header"
+            class="pa-3"
           >
-            <div class="pa-3">
-              <div class="title font-weight-light mb-2">Simple Table</div>
-              <div class="subheading font-weight-thin grey--text text--lighten-2">Here is a subtitle for this table</div>
-            </div>
-          </v-card>
+            <div class="title font-weight-light mb-2">Simple Table</div>
+            <div class="subheading font-weight-thin grey--text text--lighten-2">Here is a subtitle for this table</div>
+          </div>
 
           <v-data-table
             :headers="headers"

@@ -4,11 +4,15 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
+    "start": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "chartist": "0.11.0",
+    "sass-loader": "^7.1.0",
     "vue": "^2.5.17",
+    "vue-chartist": "^2.1.2",
     "vue-meta": "^1.5.2",
     "vuetify": "^1.2.0-beta.0"
   },

@@ -6,25 +6,21 @@
     >
       <v-flex xs12>
         <material-card>
-          <v-card
-            slot="offset"
-            color="secondary"
-            class="elevation-10"
-            dark
+          <div
+            slot="header"
+            class="pa-3"
           >
-            <div class="pa-3">
-              <div class="title font-weight-light mb-2">Notifications</div>
-              <div class="subheading font-weight-thin grey--text text--lighten-2">
-                Handcrafted by us with
-                <v-icon
-                  color="grey lighten-2"
-                  size="22"
-                >
-                  mdi-heart
-                </v-icon>
-              </div>
+            <div class="title font-weight-light mb-2">Notifications</div>
+            <div class="subheading font-weight-thin grey--text text--lighten-3">
+              Handcrafted by us with
+              <v-icon
+                color="grey lighten-2"
+                size="22"
+              >
+                mdi-heart
+              </v-icon>
             </div>
-          </v-card>
+          </div>
 
           <v-card-text>
             <h2 class="title font-weight-light mb-3">Notifications Style</h2>

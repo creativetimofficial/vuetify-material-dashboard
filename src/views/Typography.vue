@@ -9,19 +9,15 @@
     >
       <v-flex xs12>
         <material-card>
-          <v-card
-            slot="offset"
-            color="secondary"
-            class="elevation-10"
-            dark
+          <div
+            slot="header"
+            class="pa-3"
           >
-            <div class="pa-3">
-              <div class="title font-weight-light mb-2">Material Dashboard Heading</div>
-              <div class="subheading font-weight-thin grey--text text--lighten-2">
-                Created using Roboto Font Family
-              </div>
+            <div class="title font-weight-light mb-2">Material Dashboard Heading</div>
+            <div class="subheading font-weight-thin grey--text text--lighten-3">
+              Created using Roboto Font Family
             </div>
-          </v-card>
+          </div>
 
           <v-card-text>
             <h1 class="display-2 font-weight-light mb-4">Typography</h1>
