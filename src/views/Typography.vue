@@ -8,17 +8,10 @@
       align-center
     >
       <v-flex xs12>
-        <material-card>
-          <div
-            slot="header"
-            class="pa-3"
-          >
-            <div class="title font-weight-light mb-2">Material Dashboard Heading</div>
-            <div class="subheading font-weight-thin grey--text text--lighten-3">
-              Created using Roboto Font Family
-            </div>
-          </div>
-
+        <material-card
+          title="Material Dashboard Heading"
+          text="Created using Roboto Font Family"
+        >
           <v-card-text>
             <h1 class="display-2 font-weight-light mb-4">Typography</h1>
 

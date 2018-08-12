@@ -199,6 +199,7 @@
 <script>
 export default {
   data: () => ({
+    color: null,
     colors: [
       'primary',
       'secondary',

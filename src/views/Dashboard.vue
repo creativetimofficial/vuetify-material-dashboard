@@ -278,17 +278,11 @@
         xs12
         md6
       >
-        <material-card color="orange">
-          <div
-            slot="header"
-            class="pa-3"
-          >
-            <div class="title font-weight-light mb-2">Employee Stats</div>
-            <div class="subheading font-weight-thin grey--text text--lighten-3">
-              New employees on 15th September, 2016
-            </div>
-          </div>
-
+        <material-card
+          color="orange"
+          title="Employee Stats"
+          text="New employees on 15th September, 2016"
+        >
           <v-data-table
             :headers="headers"
             :items="items"

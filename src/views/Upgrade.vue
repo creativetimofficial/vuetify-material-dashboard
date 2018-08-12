@@ -6,15 +6,11 @@
         sm10
         md8
       >
-        <material-card color="primary">
-          <div
-            slot="header"
-            class="pa-3"
-          >
-            <div class="title font-weight-light mb-2">Vue Material Dashboard PRO</div>
-            <div class="subheading font-weight-thin grey--text text--lighten-3">Are you looking for more components? Please check our Premium Version of Vue Material Dashboard.</div>
-          </div>
-
+        <material-card
+          color="primary"
+          title="Vue Material Dashboard PRO"
+          text="Are you looking for more components? Please check our Premium Version of Vue Material Dashboard."
+        >
           <table class="v-table">
             <thead>
               <tr>
@@ -70,6 +66,7 @@
                     round
                     large
                     color="grey"
+                    disabled
                   >Current Version</v-btn>
                 </td>
                 <td>

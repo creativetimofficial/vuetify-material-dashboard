@@ -12,15 +12,10 @@
         xs12
         md6
       >
-        <material-card>
-          <div
-            slot="header"
-            class="pa-3"
-          >
-            <div class="title font-weight-light mb-2">Simple Table</div>
-            <div class="subheading font-weight-thin grey--text text--lighten-3">Here is a subtitle for this table</div>
-          </div>
-
+        <material-card
+          title="Simple Table"
+          text="Here is a subtitle for this table"
+        >
           <v-data-table
             :headers="headers"
             :items="items"
@@ -52,22 +47,11 @@
         md6
       >
         <material-card
-          color="transparent"
           flat
           full-width
+          title="Table on Plain Background"
+          text="Here is a subtitle for this table"
         >
-          <v-card
-            slot="offset"
-            color="secondary"
-            class="elevation-10"
-            dark
-          >
-            <div class="pa-3">
-              <div class="title font-weight-light mb-2">Table on Plain Background</div>
-              <div class="subheading font-weight-thin grey--text text--lighten-3">Here is a subtitle for this table</div>
-            </div>
-          </v-card>
-
           <v-data-table
             :headers="headers"
             :items="items.slice(0, 3)"

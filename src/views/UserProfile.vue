@@ -11,15 +11,10 @@
         xs12
         md8
       >
-        <material-card>
-          <div
-            slot="header"
-            class="pa-3"
-          >
-            <div class="title font-weight-light mb-2">Edit Profile</div>
-            <div class="subheading font-weight-thin grey--text text--lighten-3">Complete your profile</div>
-          </div>
-
+        <material-card
+          title="Edit Profile"
+          text="Complete your profile"
+        >
           <v-form>
             <v-container py-0>
               <v-layout wrap>
