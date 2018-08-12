@@ -9,8 +9,8 @@
     persistent
   >
     <v-img
+      :src="image"
       height="100%"
-      src="https://demos.creative-tim.com/vue-material-dashboard/img/sidebar-2.32103624.jpg"
     >
       <v-layout
         class="pa-3 fill-height"
@@ -40,7 +40,7 @@
           v-for="(link, i) in links"
           :key="i"
           :to="link.to"
-          active-class="secondary"
+          active-class="primary"
           avatar
           class="mb-2"
         >
@@ -53,7 +53,7 @@
           />
         </v-list-tile>
         <v-list-tile
-          active-class="secondary"
+          active-class="primary"
           class="v-list__tile--buy"
           to="/upgrade"
         >
@@ -71,7 +71,10 @@
 
 <script>
 // Utilities
-import { mapMutations } from 'vuex'
+import {
+  mapMutations,
+  mapState
+} from 'vuex'
 
 export default {
   data: () => ({
@@ -114,6 +117,7 @@ export default {
     ]
   }),
   computed: {
+    ...mapState('app', ['image']),
     inputValue: {
       get () {
         return this.$store.state.app.drawer

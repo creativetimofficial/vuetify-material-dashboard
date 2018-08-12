@@ -1,5 +1,7 @@
 <template>
   <v-app>
+    <core-filter />
+
     <core-toolbar />
 
     <core-drawer />
