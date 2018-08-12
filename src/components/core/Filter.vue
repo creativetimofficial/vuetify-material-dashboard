@@ -80,6 +80,32 @@
               Documentation
             </v-btn>
           </v-flex>
+          <v-flex xs12>
+            <div class="text-xs-center body-2 text-uppercase">
+              <div class="mb-3">
+                Thank You for Sharing!
+              </div>
+
+              <div>
+                <v-btn
+                  color="indigo"
+                  dark
+                  fab
+                  small
+                >
+                  <v-icon>mdi-facebook</v-icon>
+                </v-btn>
+                <v-btn
+                  color="cyan"
+                  dark
+                  fab
+                  small
+                >
+                  <v-icon>mdi-twitter</v-icon>
+                </v-btn>
+              </div>
+            </div>
+          </v-flex>
         </v-layout>
       </v-container>
     </v-card>
