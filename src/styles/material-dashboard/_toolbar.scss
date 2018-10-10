@@ -1,0 +1,63 @@
+.v-toolbar {
+  min-height: $toolbar-min-height;
+
+  .v-toolbar__content {
+    min-height: $toolbar-min-height;
+    padding-bottom: $padding-small;
+    padding-top: $padding-small;
+
+    .v-toolbar__title {
+      font-size: $font-size-toolbar-title;
+      letter-spacing: unset;
+    }
+
+    .v-toolbar__items {
+      & > div {
+        padding: 0 !important;
+      }
+
+      .toolbar-items{
+        align-items: center;
+        border-radius: $border-radius-base;
+        display: flex;
+        min-height: $list-item-height;
+        padding: $padding-small $padding-general;
+
+        .v-badge__badge {
+          border: $badge-border !important;
+          font-size: $font-size-mini;
+          height: $badge-dimension;
+          line-height: normal;
+          right: -7px;
+          top: -12px;
+          width: $badge-dimension;
+          font-weight: $font-weight-base;
+        }
+
+        .v-icon {
+          font-size: $font-size-toolbar-items;
+        }
+      }
+
+      .v-input {
+        margin: 0 !important;
+        padding: 0;
+      }
+    }
+  }
+}
+
+@media all and (max-width: 550px) {
+  .v-toolbar__content {
+    flex-direction: column;
+    height: auto !important;
+
+    .v-toolbar-title {
+      width: 100%;
+    }
+  }
+
+  .v-content {
+    padding-top: 121px !important; 
+  }
+}

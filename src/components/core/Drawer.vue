@@ -3,18 +3,18 @@
     id="app-drawer"
     v-model="inputValue"
     app
-    class="elevation-12"
     dark
     floating
     persistent
+    mobile-break-point="991"
+    width="260"
   >
     <v-img
       :src="image"
       height="100%"
     >
       <v-layout
-        class="pa-3 fill-height"
-        style="background: rgba(0, 0, 0, 0.7);"
+        class="fill-height"
         tag="v-list"
         column
       >
@@ -24,37 +24,34 @@
           >
             <v-img
               src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Vue.js_Logo.svg/400px-Vue.js_Logo.svg.png"
-              height="32"
+              height="34"
               contain
-              class="mt-1"
             />
           </v-list-tile-avatar>
-          <v-list-tile-title class="title font-weight-light">
+          <v-list-tile-title class="title">
             VUE MD
           </v-list-tile-title>
         </v-list-tile>
-        <v-divider
-          class="mt-2 mb-4"
-        />
+        <v-divider/>
         <v-list-tile
           v-for="(link, i) in links"
           :key="i"
           :to="link.to"
-          active-class="primary"
+          :active-class="color"
           avatar
-          class="mb-2"
+          class="v-list-item"
         >
           <v-list-tile-action>
             <v-icon>{{ link.icon }}</v-icon>
           </v-list-tile-action>
           <v-list-tile-title
-            class="font-weight-thin"
             v-text="link.text"
           />
         </v-list-tile>
         <v-list-tile
+          disabled
           active-class="primary"
-          class="v-list__tile--buy"
+          class="v-list-item v-list__tile--buy"
           to="/upgrade"
         >
           <v-list-tile-action>
@@ -77,6 +74,12 @@ import {
 } from 'vuex'
 
 export default {
+  props: {
+    opened: {
+      type: Boolean,
+      default: false
+    }
+  },
   data: () => ({
     links: [
       {
@@ -117,7 +120,7 @@ export default {
     ]
   }),
   computed: {
-    ...mapState('app', ['image']),
+    ...mapState('app', ['image', 'color']),
     inputValue: {
       get () {
         return this.$store.state.app.drawer
@@ -144,6 +147,7 @@ export default {
 
       &--buy {
         margin-top: auto;
+        margin-bottom: 17px;
       }
     }
   }

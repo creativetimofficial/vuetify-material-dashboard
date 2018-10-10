@@ -21,19 +21,16 @@
           v-if="!title && !text"
           name="header"
         />
-        <div
-          v-else
-          class="pa-3"
-        >
-          <div
+        <span v-else>
+          <h4
             class="title font-weight-light mb-2"
             v-text="title"
           />
-          <div
-            class="subheading font-weight-thin grey--text text--lighten-3"
+          <p
+            class="category font-weight-thin"
             v-text="text"
           />
-        </div>
+        </span>
       </v-card>
       <slot
         v-else

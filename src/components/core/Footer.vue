@@ -2,24 +2,28 @@
   <v-footer
     id="core-footer"
     absolute
-    class="px-5"
-    height="96"
+    height="82"
   >
-    <a
-      v-for="link in links"
-      :key="link"
-      href="#"
-      class="tertiary--text mr-5"
-      v-text="link"
-    />
+    <div class="footer-items">
+      <span
+        v-for="link in links"
+        :key="link.name"
+      >
+        <a
+          :href="link.Link"
+          class="tertiary--text footer-links">{{ link.name }}</a>
+      </span>
+    </div>
     <v-spacer/>
-    <span class="subheading font-weight-thin">
+    <span class="font-weight-light copyright">
       &copy;
       {{ (new Date()).getFullYear() }}
-      Creative Tim, made with
+      <a
+        href="https://www.creative-tim.com/"
+        target="_blank">Creative Tim</a>, made with
       <v-icon
         color="tertiary"
-        size="22">mdi-heart</v-icon>
+        size="17">mdi-heart</v-icon>
       for a better web
     </span>
   </v-footer>
@@ -29,10 +33,10 @@
 export default {
   data: () => ({
     links: [
-      'Home',
-      'Company',
-      'Portfolio',
-      'Blog'
+      { name: 'Home', Link: '/#' },
+      { name: 'Creative Tim', Link: 'https://www.creative-tim.com' },
+      { name: 'About Us', Link: 'https://creative-tim.com/presentation' },
+      { name: 'Blog', Link: 'https://blog.creative-tim.com' }
     ]
   })
 }
@@ -40,13 +44,6 @@ export default {
 
 <style>
 #core-footer {
-  border-top: 1px solid rgba(0, 0, 0, 0.12);
   z-index: 0;
-}
-
-#core-footer a {
-  font-weight: 500;
-  text-decoration: none;
-  text-transform: uppercase;
 }
 </style>

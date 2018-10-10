@@ -62,6 +62,7 @@ export default {
     .v-card--material__header {
       .ct-label {
         color: inherit;
+        opacity: .7;
         font-size: 0.975rem;
         font-weight: 100;
       }

@@ -18,22 +18,17 @@
       </v-icon>
     </v-card>
     <div class="text-xs-right">
-      <div
-        class="subheading grey--text font-weight-light"
+      <p
+        class="category grey--text font-weight-light"
         v-text="title"
       />
-      <div
-        class="display-1 font-weight-light"
-        v-text="value"
-      />
+      <h3
+        class="title display-1 font-weight-light">
+        {{ value }} <small>{{ smallValue }}</small>
+      </h3>
     </div>
 
-    <v-layout
-      slot="actions"
-      align-center
-      py-3
-      px-4
-    >
+    <template slot="actions">
       <v-icon
         :color="subIconColor"
         size="20"
@@ -42,11 +37,11 @@
         {{ subIcon }}
       </v-icon>
       <span
+        :class="subTextColor"
         class="caption font-weight-light"
         v-text="subText"
       />
-    </v-layout>
-
+    </template>
   </material-card>
 </template>
 
@@ -70,6 +65,10 @@ export default {
       type: String,
       default: undefined
     },
+    subTextColor: {
+      type: String,
+      default: undefined
+    },
     subText: {
       type: String,
       default: undefined
@@ -79,6 +78,11 @@ export default {
       default: undefined
     },
     value: {
+      type: String,
+      default: undefined
+    },
+    smallValue: {
+      type: String,
       default: undefined
     }
   }

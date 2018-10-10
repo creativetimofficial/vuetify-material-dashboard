@@ -6,9 +6,9 @@
   >
     <v-layout wrap>
       <v-flex
-        xs12
-        sm6
-        md4
+        md12
+        sm12
+        lg4
       >
         <material-chart-card
           :data="dailySalesChart.data"
@@ -16,39 +16,33 @@
           color="info"
           type="Line"
         >
-          <h3 class="title font-weight-light">
-            <div class="mb-3">Daily Sales</div>
-            <div class="d-inline-flex subheading font-weight-light">
-              <v-icon
-                color="green"
-                small
-              >
-                mdi-arrow-up
-              </v-icon>
-              <span class="green--text">55%</span>&nbsp;
-              <span class="grey--text text--darken-1">
-                increase in today's sales
-              </span>
-            </div>
-          </h3>
+          <h4 class="title font-weight-light">Daily Sales</h4>
+          <p class="category d-inline-flex font-weight-light">
+            <v-icon
+              color="green"
+              small
+            >
+              mdi-arrow-up
+            </v-icon>
+            <span class="green--text">55%</span>&nbsp;
+            increase in today's sales
+          </p>
 
           <template slot="actions">
-            <div class="px-3">
-              <v-icon
-                class="mr-2"
-                small
-              >
-                mdi-clock-outline
-              </v-icon>
-              <span class="caption grey--text font-weight-light">updated 4 minutes ago</span>
-            </div>
+            <v-icon
+              class="mr-2"
+              small
+            >
+              mdi-clock-outline
+            </v-icon>
+            <span class="caption grey--text font-weight-light">updated 4 minutes ago</span>
           </template>
         </material-chart-card>
       </v-flex>
       <v-flex
-        xs12
-        sm6
-        md4
+        md12
+        sm12
+        lg4
       >
         <material-chart-card
           :data="emailsSubscriptionChart.data"
@@ -57,28 +51,24 @@
           color="red"
           type="Bar"
         >
-          <h3 class="title font-weight-light">
-            <div class="mb-3">Email Subscription</div>
-            <div class="grey--text text--darken-1 d-inline-flex subheading font-weight-light">Last Campaign Performance</div>
-          </h3>
+          <h4 class="title font-weight-light">Email Subscription</h4>
+          <p class="category d-inline-flex font-weight-light">Last Campaign Performance</p>
 
           <template slot="actions">
-            <div class="px-3">
-              <v-icon
-                class="mr-2"
-                small
-              >
-                mdi-clock-outline
-              </v-icon>
-              <span class="caption grey--text font-weight-light">updated 10 minutes ago</span>
-            </div>
+            <v-icon
+              class="mr-2"
+              small
+            >
+              mdi-clock-outline
+            </v-icon>
+            <span class="caption grey--text font-weight-light">updated 10 minutes ago</span>
           </template>
         </material-chart-card>
       </v-flex>
       <v-flex
-        xs12
-        sm6
-        md4
+        md12
+        sm12
+        lg4
       >
         <material-chart-card
           :data="dataCompletedTasksChart.data"
@@ -86,31 +76,28 @@
           color="green"
           type="Line"
         >
-          <h3 class="title font-weight-light">
-            <div class="mb-3">Completed Tasks</div>
-            <div class="grey--text text--darken-1 d-inline-flex subheading font-weight-light">Last Last Campaign Performance</div>
-          </h3>
+          <h3 class="title font-weight-light">Completed Tasks</h3>
+          <p class="category d-inline-flex font-weight-light">Last Last Campaign Performance</p>
 
           <template slot="actions">
-            <div class="px-3">
-              <v-icon
-                class="mr-2"
-                small
-              >
-                mdi-clock-outline
-              </v-icon>
-              <span class="caption grey--text font-weight-light">campaign sent 26 minutes ago</span>
-            </div>
+            <v-icon
+              class="mr-2"
+              small
+            >
+              mdi-clock-outline
+            </v-icon>
+            <span class="caption grey--text font-weight-light">campaign sent 26 minutes ago</span>
           </template>
         </material-chart-card>
       </v-flex>
       <v-flex
-        xs12
         sm6
-        md4
+        xs12
+        md6
         lg3
       >
         <material-stats-card
+          color="green"
           icon="mdi-store"
           title="Revenue"
           value="$34,245"
@@ -119,29 +106,31 @@
         />
       </v-flex>
       <v-flex
-        xs12
         sm6
-        md4
+        xs12
+        md6
         lg3
       >
         <material-stats-card
           color="orange"
           icon="mdi-content-copy"
           title="Used Space"
-          value="49/50 GB"
+          value="49/50"
+          small-value="GB"
           sub-icon="mdi-alert"
           sub-icon-color="error"
           sub-text="Get More Space..."
+          sub-text-color="text-primary"
         />
       </v-flex>
       <v-flex
-        xs12
         sm6
-        md4
+        xs12
+        md6
         lg3
       >
         <material-stats-card
-          color="error"
+          color="red"
           icon="mdi-information-outline"
           title="Fixed Issues"
           value="75"
@@ -150,13 +139,13 @@
         />
       </v-flex>
       <v-flex
-        xs12
         sm6
-        md4
+        xs12
+        md6
         lg3
       >
         <material-stats-card
-          color="cyan"
+          color="info"
           icon="mdi-twitter"
           title="Followers"
           value="+245"
@@ -165,14 +154,50 @@
         />
       </v-flex>
       <v-flex
-        xs12
-        sm6
+        md12
+        lg6
       >
-        <material-card>
+        <material-card
+          color="orange"
+          title="Employee Stats"
+          text="New employees on 15th September, 2016"
+        >
+          <v-data-table
+            :headers="headers"
+            :items="items"
+            hide-actions
+          >
+            <template
+              slot="headerCell"
+              slot-scope="{ header }"
+            >
+              <span
+                class="font-weight-light text-warning text--darken-3"
+                v-text="header.text"
+              />
+            </template>
+            <template
+              slot="items"
+              slot-scope="{ index, item }"
+            >
+              <td>{{ index + 1 }}</td>
+              <td>{{ item.name }}</td>
+              <td class="text-xs-right">{{ item.salary }}</td>
+              <td class="text-xs-right">{{ item.country }}</td>
+              <td class="text-xs-right">{{ item.city }}</td>
+            </template>
+          </v-data-table>
+        </material-card>
+      </v-flex>
+      <v-flex
+        md12
+        lg6
+      >
+        <material-card
+          class="card-tabs"
+          color="green">
           <v-flex
             slot="header"
-            py-3
-            px-4
           >
             <v-tabs
               v-model="tabs"
@@ -184,15 +209,15 @@
                 style="align-self: center"
               >Tasks:</span>
               <v-tab class="mr-3">
-                <v-icon class="mr-3">mdi-bug</v-icon>
+                <v-icon class="mr-2">mdi-bug</v-icon>
                 Bugs
               </v-tab>
               <v-tab class="mr-3">
-                <v-icon class="mr-3">mdi-code-tags</v-icon>
+                <v-icon class="mr-2">mdi-code-tags</v-icon>
                 Website
               </v-tab>
               <v-tab>
-                <v-icon class="mr-3">mdi-cloud</v-icon>
+                <v-icon class="mr-2">mdi-cloud</v-icon>
                 Server
               </v-tab>
             </v-tabs>
@@ -215,14 +240,33 @@
                     Sign contract for "What are conference organized afraid of?"
                   </v-list-tile-title>
                   <div class="d-flex">
-                    <v-btn
-                      icon
-                    >
-                      <v-icon color="primary">mdi-pencil</v-icon>
-                    </v-btn>
-                    <v-btn icon>
-                      <v-icon color="error">mdi-close</v-icon>
-                    </v-btn>
+                    <v-tooltip
+                      top
+                      content-class="top">
+                      <v-btn
+                        slot="activator"
+                        class="v-btn--simple"
+                        color="green"
+                        icon
+                      >
+                        <v-icon color="primary">mdi-pencil</v-icon>
+                      </v-btn>
+                      <span>Edit</span>
+                    </v-tooltip>
+                    <v-tooltip
+                      top
+                      content-class="top">
+                      <v-btn
+                        slot="activator"
+                        class="v-btn--simple"
+                        color="danger"
+                        icon
+                      >
+                        <v-icon color="error">mdi-close</v-icon>
+                      </v-btn>
+                      <span>Close</span>
+                    </v-tooltip>
+
                   </div>
                 </v-list-tile>
                 <v-divider/>
@@ -237,14 +281,32 @@
                     Lines From Great Russian Literature? Or E-mails From My Boss?
                   </v-list-tile-title>
                   <div class="d-flex">
-                    <v-btn
-                      icon
-                    >
-                      <v-icon color="primary">mdi-pencil</v-icon>
-                    </v-btn>
-                    <v-btn icon>
-                      <v-icon color="error">mdi-close</v-icon>
-                    </v-btn>
+                    <v-tooltip
+                      top
+                      content-class="top">
+                      <v-btn
+                        slot="activator"
+                        class="v-btn--simple"
+                        color="green"
+                        icon
+                      >
+                        <v-icon color="primary">mdi-pencil</v-icon>
+                      </v-btn>
+                      <span>Edit</span>
+                    </v-tooltip>
+
+                    <v-tooltip
+                      top
+                      content-class="top">
+                      <v-btn
+                        slot="activator"
+                        class="v-btn--simple"
+                        color="danger"
+                        icon>
+                        <v-icon color="error">mdi-close</v-icon>
+                      </v-btn>
+                      <span>Close</span>
+                    </v-tooltip>
                   </div>
                 </v-list-tile>
                 <v-divider/>
@@ -259,55 +321,38 @@
                     Flooded: One year later, assessing what was lost and what was found when a ravaging rain swept through metro Detroit
                   </v-list-tile-title>
                   <div class="d-flex">
-                    <v-btn
-                      icon
-                    >
-                      <v-icon color="primary">mdi-pencil</v-icon>
-                    </v-btn>
-                    <v-btn icon>
-                      <v-icon color="error">mdi-close</v-icon>
-                    </v-btn>
+                    <v-tooltip
+                      top
+                      content-class="top">
+                      <v-btn
+                        slot="activator"
+                        class="v-btn--simple"
+                        color="green"
+                        icon
+                      >
+                        <v-icon color="primary">mdi-pencil</v-icon>
+                      </v-btn>
+                      <span>Edit</span>
+                    </v-tooltip>
+                    <v-tooltip
+                      top
+                      content-class="top">
+                      <v-btn
+                        slot="activator"
+                        class="v-btn--simple"
+                        color="danger"
+                        icon
+                      >
+                        <v-icon color="error">mdi-close</v-icon>
+                      </v-btn>
+                      <span>Close</span>
+                    </v-tooltip>
+
                   </div>
                 </v-list-tile>
               </v-list>
             </v-tab-item>
           </v-tabs-items>
-        </material-card>
-      </v-flex>
-      <v-flex
-        xs12
-        md6
-      >
-        <material-card
-          color="orange"
-          title="Employee Stats"
-          text="New employees on 15th September, 2016"
-        >
-          <v-data-table
-            :headers="headers"
-            :items="items"
-            hide-actions
-          >
-            <template
-              slot="headerCell"
-              slot-scope="{ header }"
-            >
-              <span
-                class="subheading font-weight-light orange--text text--darken-3"
-                v-text="header.text"
-              />
-            </template>
-            <template
-              slot="items"
-              slot-scope="{ index, item }"
-            >
-              <td>{{ index + 1 }}</td>
-              <td>{{ item.name }}</td>
-              <td class="text-xs-right">{{ item.salary }}</td>
-              <td>{{ item.country }}</td>
-              <td>{{ item.city }}</td>
-            </template>
-          </v-data-table>
         </material-card>
       </v-flex>
     </v-layout>
@@ -412,12 +457,14 @@ export default {
         {
           sortable: false,
           text: 'Country',
-          value: 'country'
+          value: 'country',
+          align: 'right'
         },
         {
           sortable: false,
           text: 'City',
-          value: 'city'
+          value: 'city',
+          align: 'right'
         }
       ],
       items: [
@@ -447,11 +494,6 @@ export default {
           country: 'Malawi',
           city: 'Feldkirchen in Kārnten',
           salary: '$63,542'
-        }, {
-          name: 'Mason Porter',
-          country: 'Chile',
-          city: 'Gloucester',
-          salary: '$78,615'
         }
       ],
       tabs: 0,

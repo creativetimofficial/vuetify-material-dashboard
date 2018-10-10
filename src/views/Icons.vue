@@ -1,15 +1,15 @@
 <template>
   <v-container
     fill-height
+    fluid
     style="flex-wrap: wrap;"
   >
-    <material-card>
+    <material-card color="green">
       <div
         slot="header"
-        class="pa-3"
       >
         <div class="title font-weight-light mb-2">Material Design Icons</div>
-        <div class="subheading font-weight-thin grey--text text--lighten-3">
+        <div class="category font-weight-thin">
           See all available
           <a
             class="white--text"
@@ -31,7 +31,9 @@
           :key="icon"
           ma-2
         >
-          <v-tooltip top>
+          <v-tooltip
+            top
+            content-class="top">
             <v-icon slot="activator">
               {{ icon }}
             </v-icon>
@@ -45,7 +47,7 @@
       <v-btn
         large
         class="mx-0 font-weight-light"
-        color="secondary"
+        color="green"
         href="https://materialdesignicons.com/"
         target="_blank"
         round

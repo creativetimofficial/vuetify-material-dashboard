@@ -11,12 +11,11 @@
   >
     <v-btn
       slot="activator"
-      class="elevation-10"
+      class="elevation-0"
       color="grey"
       dark
       fab
       fixed
-      right
       style="top: 96px;"
       top
     >
@@ -26,30 +25,24 @@
       <v-container grid-list-xl>
         <v-layout wrap>
           <v-flex xs12>
-            <div class="text-xs-center body-2 text-uppercase mb-3">Primary Color</div>
+            <div class="text-xs-center body-2 text-uppercase sidebar-filter">Sidebar Filters</div>
 
             <v-layout justify-center>
               <v-avatar
                 v-for="c in colors"
                 :key="c"
-                :style="{
-                  backgroundColor: c
-                }"
-                :class="[c === color ? 'elevation-10' : '']"
-                class="mx-1"
-                size="24"
+                :class="[c === color ? 'color-active color-' + c: 'color-' + c]"
+                size="23"
+
                 @click="setColor(c)"
-              >
-                <v-icon
-                  v-if="c === color"
-                  class="white--text"
-                  small
-                >
-                  mdi-check
-                </v-icon>
-              </v-avatar>
+              />
             </v-layout>
             <v-divider class="mt-3"/>
+          </v-flex>
+          <v-flex
+            xs12
+          >
+            <div class="text-xs-center body-2 text-uppercase sidebar-filter">Images</div>
           </v-flex>
           <v-flex
             v-for="img in images"
@@ -57,7 +50,7 @@
             xs3
           >
             <v-img
-              :class="[image === img ? 'elevation-12' : '']"
+              :class="[image === img ? 'image-active' : '']"
               :src="img"
               height="120"
               @click.native="setImage(img)"
@@ -65,7 +58,7 @@
           </v-flex>
           <v-flex xs12>
             <v-btn
-              color="success"
+              color="green"
               block
             >
               Free Download
@@ -82,23 +75,27 @@
           </v-flex>
           <v-flex xs12>
             <div class="text-xs-center body-2 text-uppercase">
-              <div class="mb-3">
+              <div class=" sidebar-filter">
                 Thank You for Sharing!
               </div>
 
               <div>
                 <v-btn
                   color="indigo"
+                  class="mr-2 v-btn-facebook"
                   dark
                   fab
+                  icon
                   small
                 >
                   <v-icon>mdi-facebook</v-icon>
                 </v-btn>
                 <v-btn
                   color="cyan"
+                  class="v-btn-twitter"
                   dark
                   fab
+                  icon
                   small
                 >
                   <v-icon>mdi-twitter</v-icon>
@@ -118,16 +115,15 @@ import {
   mapMutations,
   mapState
 } from 'vuex'
-import colors from 'vuetify/es5/util/colors'
 
 export default {
   data: () => ({
     colors: [
-      colors.purple.base,
-      colors.teal.base,
-      colors.green.base,
-      colors.orange.base,
-      colors.red.base
+      'primary',
+      'info',
+      'success',
+      'warning',
+      'danger'
     ],
     images: [
       'https://demos.creative-tim.com/vue-material-dashboard/img/sidebar-1.23832d31.jpg',
@@ -138,16 +134,16 @@ export default {
   }),
 
   computed: {
-    ...mapState('app', ['image']),
+    ...mapState('app', ['image', 'color']),
     color () {
-      return this.$vuetify.theme.primary
+      return this.$store.state.app.color
     }
   },
 
   methods: {
     ...mapMutations('app', ['setImage']),
     setColor (color) {
-      this.$vuetify.theme.primary = color
+      this.$store.state.app.color = color
     }
   }
 }
