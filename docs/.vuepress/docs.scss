@@ -1,0 +1,182 @@
+@import '../../src/styles/material-dashboard/_variables';
+
+.theme-container .page {
+  min-height: 100vh;
+  background-color: white;
+}
+
+.demo-block {
+  position: relative;
+}
+
+.v-toolbar {
+  position: relative !important;
+}
+
+.v-tooltip__content {
+  left: 0px !important;
+  right: 0px;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 130px !important;
+
+  &.top {
+    top: -50px !important;
+  }
+
+  &.bottom {
+    top: 60px !important;
+  }
+}
+
+[class*="demo-tabs"] {
+  a:hover {
+    text-decoration: none !important;
+  }
+}
+
+[class*="demo-data-tables"] {
+  tr,
+  th,
+  td {
+    border: 0;
+  }
+
+  tr:nth-child(2n) {
+    background-color: transparent;
+  }
+
+  table {
+    margin: unset;
+    display: inline-table;
+    overflow-x: auto;
+  }
+}
+
+pre code {
+  box-shadow: none;
+}
+
+.v-menu__content {
+  top: auto !important;
+  left: auto !important;
+}
+
+h1{
+  font-size: 3rem !important;
+  border-bottom: 1px solid #eaecef;
+}
+
+h2{
+  border: 0;
+}
+
+p{
+  font-size: 15px;
+}
+
+.links .nav-links a{
+
+  .icon.outbound,
+  &{
+    color: $white !important;
+  }
+}
+
+.navbar{
+  display: flex;
+  align-items: center;
+  background-color: $brand-success;
+  box-shadow: 0 12px 20px -10px rgba(76,175,80,.28), 0 4px 20px 0 rgba(0,0,0,.12), 0 7px 8px -5px rgba(76,175,80,.2);
+  border: 0;
+  height: 70px;
+
+  .links{
+    top: unset;
+    background-color: transparent;
+
+    .search-box{
+      .suggestions li a{
+        color: $black-color;
+
+        &:hover,
+        &:focus{
+          color: $brand-success !important;
+        }
+      }
+    }
+  }
+
+  .sidebar-button{
+    top: 0.9rem;
+
+    svg path{
+      fill: $white;
+    }
+  }
+
+  .site-name{
+    font-size: 1.125rem;
+    color: $white;
+    font-weight: 300;
+  }
+}
+
+.sidebar{
+  a.sidebar-link{
+    color: $black-color !important;
+
+    &:hover,
+    &:focus{
+      color: $brand-success !important;
+    }
+
+    &.active{
+      color: $brand-success !important;
+    }
+  }
+}
+
+.page .page-nav{
+  .next a,
+  .next a:hover,
+  .next a:focus,
+  .prev a,
+  .prev a:hover,
+  .prev a:focus{
+    color: $brand-success !important;
+  }
+}
+
+.md-list{
+  width: 11%;
+}
+
+.md-card{
+  th, td, tr{
+    border: 0;
+  }
+
+  tr:nth-child(2n){
+    background-color: transparent;
+  }
+}
+
+#sizes + p + .demo-block .source{
+  display: flex;
+  align-items: center;
+}
+
+.md-toolbar .md-list{
+  width: 100%;
+  justify-content: flex-end;
+}
+
+.demo-block .source .md-toolbar{
+  margin-bottom: 10px;
+}
+
+.theme-container{
+  height: 100vh;
+  position: relative;
+}
