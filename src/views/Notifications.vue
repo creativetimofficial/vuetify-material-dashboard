@@ -127,7 +127,7 @@
                   sm4>
                   <v-btn
                     block
-                    color="green"
+                    color="success"
                     @click="snack('top', 'left')"
                   >
                     Top Left
@@ -138,7 +138,7 @@
                   sm4>
                   <v-btn
                     block
-                    color="green"
+                    color="success"
                     @click="snack('top')"
                   >
                     Top Center
@@ -154,7 +154,7 @@
                   sm4>
                   <v-btn
                     block
-                    color="green"
+                    color="success"
                     @click="snack('top', 'right')"
                   >
                     Top Right
@@ -165,7 +165,7 @@
                   sm4>
                   <v-btn
                     block
-                    color="green"
+                    color="success"
                     @click="snack('bottom', 'left')"
                   >
                     Bottom Left
@@ -181,7 +181,7 @@
                   sm4>
                   <v-btn
                     block
-                    color="green"
+                    color="success"
                     @click="snack('bottom')"
                   >
                     Bottom Center
@@ -192,7 +192,7 @@
                   sm4>
                   <v-btn
                     block
-                    color="green"
+                    color="success"
                     @click="snack('bottom', 'right')"
                   >
                     Bottom Right
@@ -207,7 +207,6 @@
               :top="top"
               :left="left"
               :right="right"
-              :timeout="900000"
               v-model="snackbar"
               dark
             >

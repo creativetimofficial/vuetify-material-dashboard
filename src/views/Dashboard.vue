@@ -246,7 +246,7 @@
                       <v-btn
                         slot="activator"
                         class="v-btn--simple"
-                        color="green"
+                        color="success"
                         icon
                       >
                         <v-icon color="primary">mdi-pencil</v-icon>
@@ -274,7 +274,7 @@
                   <v-list-tile-action>
                     <v-checkbox
                       :value="list[1]"
-                      color="green"
+                      color="success"
                     />
                   </v-list-tile-action>
                   <v-list-tile-title>
@@ -287,7 +287,7 @@
                       <v-btn
                         slot="activator"
                         class="v-btn--simple"
-                        color="green"
+                        color="success"
                         icon
                       >
                         <v-icon color="primary">mdi-pencil</v-icon>
@@ -314,7 +314,7 @@
                   <v-list-tile-action>
                     <v-checkbox
                       :value="list[2]"
-                      color="green"
+                      color="success"
                     />
                   </v-list-tile-action>
                   <v-list-tile-title>
@@ -327,7 +327,7 @@
                       <v-btn
                         slot="activator"
                         class="v-btn--simple"
-                        color="green"
+                        color="success"
                         icon
                       >
                         <v-icon color="primary">mdi-pencil</v-icon>

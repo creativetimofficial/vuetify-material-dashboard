@@ -113,7 +113,6 @@ export default {
 
   .v-card__text {
     display: inline-block;
-    flex: 1 0 calc(100% - 120px);
     position: absolute;
     top: 0;
     right: 0;

@@ -47,9 +47,23 @@
   }
 }
 
+@mixin toolbar-colors($color-name, $color) {
+  &.#{$color-name} {
+    background-color: $color !important;
+    @include shadow-big-color($color);
+  }
+}
+
 @mixin fixed-plugin-colors($color-name, $color) {
   &.color-#{$color-name}{
     background-color: $color;
+  }
+}
+
+@mixin notifications-color($color-name, $color) {
+  .v-snack__wrapper.#{$color-name} {
+    background-color: $color !important;
+    border-color: $color !important
   }
 }
 

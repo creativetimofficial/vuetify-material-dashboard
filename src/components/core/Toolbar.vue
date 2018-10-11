@@ -15,7 +15,7 @@
           class="default v-btn--simple"
           dark
           icon
-          @click.stop="onClick"
+          @click.stop="onClickBtn"
         >
           <v-icon>mdi-view-list</v-icon>
         </v-btn>
@@ -126,8 +126,11 @@ export default {
 
   methods: {
     ...mapMutations('app', ['setDrawer', 'toggleDrawer']),
-    onClick () {
+    onClickBtn () {
       this.setDrawer(!this.$store.state.app.drawer)
+    },
+    onClick () {
+      //
     },
     onResponsiveInverted () {
       if (window.innerWidth < 991) {

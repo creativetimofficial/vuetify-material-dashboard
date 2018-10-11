@@ -47,7 +47,7 @@
       <v-btn
         large
         class="mx-0 font-weight-light"
-        color="green"
+        color="success"
         href="https://materialdesignicons.com/"
         target="_blank"
         round

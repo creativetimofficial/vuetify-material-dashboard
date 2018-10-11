@@ -13,7 +13,7 @@
 export default {
   metaInfo () {
     return {
-      title: 'Vue Material Dashboard by CreativeTim'
+      title: 'Vuetify Material Dashboard by CreativeTim'
     }
   }
 }
