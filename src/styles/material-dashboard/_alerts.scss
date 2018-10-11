@@ -32,9 +32,17 @@
 
 .v-snack .v-snack__wrapper,
 .v-alert {
-  @include alert-shadow('info', $brand-info);
+  @include alert-shadow('info', lighten($brand-info, 5%));
   @include alert-shadow('success', $brand-success);
   @include alert-shadow('error', $brand-danger);
   @include alert-shadow('warning', $brand-warning);
   @include alert-shadow('purple', $brand-primary);
+}
+
+.v-snack {
+  @include notifications-color('info', lighten($brand-info, 5%));
+  @include notifications-color('success', $brand-success);
+  @include notifications-color('error', $brand-danger);
+  @include notifications-color('warning', $brand-warning);
+  @include notifications-color('purple', $brand-primary);
 }

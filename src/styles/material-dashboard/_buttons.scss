@@ -4,6 +4,7 @@
   font-size: $font-size-small;
   font-weight: $font-weight-base !important;
   height: auto;
+  line-height: $line-height-base;
   color: $white !important;
   border-radius: $border-radius-base;
 
@@ -45,7 +46,7 @@
     border-radius: 50%;
   }
 
-  &.green {
+  &.success {
     @include button-color($brand-success);
   }
 
@@ -53,11 +54,11 @@
     @include button-color($gray-light);
   }
 
-  &.purple {
+  &.primary {
     @include button-color($brand-primary);
   }
 
-  &.orange {
+  &.warning {
     @include button-color($brand-warning);
   }
 
