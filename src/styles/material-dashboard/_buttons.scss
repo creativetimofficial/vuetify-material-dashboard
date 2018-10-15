@@ -43,6 +43,10 @@
     height: $btn-icon-dim;
     line-height: $btn-icon-dim;
     padding: 0;
+
+    &.v-btn--round {
+      border-radius: 50%;
+    }
   }
 
   &.success {
