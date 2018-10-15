@@ -82,7 +82,6 @@
               <div class=" sidebar-filter">
                 Thank You for Sharing!
               </div>
-
               <social-sharing :url="shareUrl" inline-template
                               title="Vuetify Material Dashboard - Admin Template for Vue.js"
                               hashtags="vuejs, vuex, dashboard, vuetify, vuetify material" twitter-user="creativetim">
