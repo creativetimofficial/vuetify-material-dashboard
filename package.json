@@ -28,8 +28,10 @@
     "stylus": "^0.54.5",
     "stylus-loader": "^3.0.1",
     "vue-analytics": "^5.8.0",
+    "vue-github-buttons": "^2.1.1",
     "vue-i18n": "^7.4.0",
     "vue-router": "^3.0.1",
+    "vue-social-sharing": "^2.3.3",
     "vue-template-compiler": "^2.5.17",
     "vuex": "^3.0.1",
     "vuex-router-sync": "^5.0.0"
