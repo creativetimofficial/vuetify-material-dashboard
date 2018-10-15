@@ -58,7 +58,9 @@
           </v-flex>
           <v-flex xs12>
             <v-btn
-              color="green"
+              href="https://www.creative-tim.com/product/vuetify-material-dashboard"
+              target="_blank"
+              color="success"
               block
             >
               Free Download
@@ -66,8 +68,10 @@
           </v-flex>
           <v-flex xs12>
             <v-btn
+              href="https://demos.creative-tim.com/vuetify-material-dashboard/documentation"
+              target="_blank"
               class="white--text"
-              color="purple"
+              color="primary"
               block
             >
               Documentation
