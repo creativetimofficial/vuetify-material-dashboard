@@ -87,26 +87,19 @@
                               title="Vuetify Material Dashboard - Admin Template for Vue.js"
                               hashtags="vuejs, vuex, dashboard, vuetify, vuetify material" twitter-user="creativetim">
                 <div class="centered-buttons">
-                  <network network="facebook" class="mr-2 v-btn-facebook v-btn v-btn--floating v-btn--icon v-btn--small theme--dark indigo">
+                  <network network="facebook" class="mr-2 v-btn-facebook v-btn v-btn--floating v-btn--icon v-btn--small theme--dark indigo v-btn--round">
                     <i class="v-icon mdi mdi-facebook theme--dark"></i>
                   </network>
-                  <network network="twitter" class="v-btn-twitter v-btn v-btn--floating v-btn--icon v-btn--small theme--dark cyan">
+                  <network network="twitter" class="v-btn-twitter v-btn v-btn--floating v-btn--icon v-btn--small theme--dark cyan v-btn--round">
                     <i class="v-icon mdi mdi-twitter theme--dark"></i>
                   </network>
                 </div>
               </social-sharing>
             </div>
-
-            <v-btn
-              color="success"
-              icon
-            >
-              <v-icon>mdi-pencil</v-icon>
-            </v-btn>
           </v-flex>
           <v-flex xs12>
             <div class="text-center">
-              <gh-btns-star slug="creativetimofficial/vue-material-dashboard" show-count></gh-btns-star>
+              <gh-btns-star slug="creativetimofficial/vuetify-material-dashboard" show-count></gh-btns-star>
             </div>
           </v-flex>
         </v-layout>
