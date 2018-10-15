@@ -32,6 +32,7 @@ We has changed the predefined button styles from [vuetifyjs.com](https://vuetify
   <v-icon left>mdi-heart</v-icon>
   With Icon
  </v-btn>
+ <v-btn color="primary" icon round><v-icon>mdi-heart</v-icon></v-btn>
  <v-btn color="primary" icon><v-icon>mdi-heart</v-icon></v-btn>
  <v-btn color="primary" class="v-btn--simple">simple</v-btn>
 ```
