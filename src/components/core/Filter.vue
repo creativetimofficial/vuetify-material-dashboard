@@ -87,20 +87,20 @@
                 <v-btn
                   color="indigo"
                   class="mr-2 v-btn-facebook"
-                  dark
                   fab
                   icon
                   small
+                  round
                 >
                   <v-icon>mdi-facebook</v-icon>
                 </v-btn>
                 <v-btn
                   color="cyan"
                   class="v-btn-twitter"
-                  dark
                   fab
                   icon
                   small
+                  round
                 >
                   <v-icon>mdi-twitter</v-icon>
                 </v-btn>
