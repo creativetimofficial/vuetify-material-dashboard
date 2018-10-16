@@ -82,15 +82,22 @@
               <div class=" sidebar-filter">
                 Thank You for Sharing!
               </div>
-              <social-sharing :url="shareUrl" inline-template
-                              title="Vuetify Material Dashboard - Admin Template for Vue.js"
-                              hashtags="vuejs, vuex, dashboard, vuetify, vuetify material" twitter-user="creativetim">
+              <social-sharing
+                :url="shareUrl"
+                inline-template
+                title="Vuetify Material Dashboard - Admin Template for Vue.js"
+                hashtags="vuejs, vuex, dashboard, vuetify, vuetify material"
+                twitter-user="creativetim">
                 <div class="centered-buttons">
-                  <network network="facebook" class="mr-2 v-btn-facebook v-btn v-btn--floating v-btn--icon v-btn--small theme--dark indigo v-btn--round">
-                    <i class="v-icon mdi mdi-facebook theme--dark"></i>
+                  <network
+                    network="facebook"
+                    class="mr-2 v-btn-facebook v-btn v-btn--floating v-btn--icon v-btn--small theme--dark indigo v-btn--round">
+                    <i class="v-icon mdi mdi-facebook theme--dark"/>
                   </network>
-                  <network network="twitter" class="v-btn-twitter v-btn v-btn--floating v-btn--icon v-btn--small theme--dark cyan v-btn--round">
-                    <i class="v-icon mdi mdi-twitter theme--dark"></i>
+                  <network
+                    network="twitter"
+                    class="v-btn-twitter v-btn v-btn--floating v-btn--icon v-btn--small theme--dark cyan v-btn--round">
+                    <i class="v-icon mdi mdi-twitter theme--dark"/>
                   </network>
                 </div>
               </social-sharing>
@@ -98,7 +105,9 @@
           </v-flex>
           <v-flex xs12>
             <div class="text-center">
-              <gh-btns-star slug="creativetimofficial/vuetify-material-dashboard" show-count></gh-btns-star>
+              <gh-btns-star
+                slug="creativetimofficial/vuetify-material-dashboard"
+                show-count/>
             </div>
           </v-flex>
         </v-layout>
@@ -112,7 +121,7 @@
 import Vue from 'vue'
 import SocialSharing from 'vue-social-sharing'
 import VueGitHubButtons from 'vue-github-buttons'
-import 'vue-github-buttons/dist/vue-github-buttons.css'
+import '../../../node_modules/vue-github-buttons/dist/vue-github-buttons.css'
 // Utilities
 import {
   mapMutations,
@@ -120,7 +129,7 @@ import {
 } from 'vuex'
 
 Vue.use(SocialSharing)
-Vue.use(VueGitHubButtons, {useCache: true})
+Vue.use(VueGitHubButtons, { useCache: true })
 
 export default {
   data: () => ({

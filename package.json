@@ -6,6 +6,7 @@
     "serve": "vue-cli-service serve",
     "dev": "npm run serve",
     "build": "vue-cli-service build",
+    "deploy": "npm run build && cd docs && npm run build && cd .. && sudo gh-pages -d dist",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
@@ -15,7 +16,7 @@
     "vue": "^2.5.17",
     "vue-chartist": "^2.1.2",
     "vue-meta": "^1.5.2",
-    "vuetify": "^1.2.5"
+    "vuetify": "^1.2.9"
   },
   "devDependencies": {
     "@mdi/font": "^2.5.94",

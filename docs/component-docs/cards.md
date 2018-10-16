@@ -2,7 +2,6 @@
 
 We think cards are one of the best ways to organise your information. We went all out with possibilities and we recommended finding the right fit for your product. ***You don't have to import the card components, these are globally declared.***
 
-
 <script>
 module.exports = {
   data() {
@@ -16,7 +15,7 @@ module.exports = {
           },
           options: {
             low: 0,
-            high: 50, // creative tim: we recommend you to set the high sa the biggest value + something for a better look
+            high: 50, // creative tim: we recommend you to set the high as the biggest value + something for a better look
             chartPadding: {
               top: 0,
               right: 0,

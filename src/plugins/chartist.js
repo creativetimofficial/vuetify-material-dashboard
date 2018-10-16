@@ -1,4 +1,7 @@
 import Vue from 'vue'
 import 'chartist/dist/chartist.min.css'
 
-Vue.use(require('vue-chartist'))
+// chartist-node-safe.js
+const SafeChartist = typeof window !== 'undefined' ? require('vue-chartist') : {}
+
+Vue.use(SafeChartist)
