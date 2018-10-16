@@ -11,11 +11,11 @@ module.exports = {
   },
   head: [
     ['link', { rel: 'stylesheet', href: `https://fonts.googleapis.com/icon?family=Material+Icons` }],
-    ['link', { rel: 'icon', type: 'image/png', sizes: '96x96', href: '/favicon.ico' }]
+    ['link', { rel: 'icon', type: 'image/png', sizes: '96x96', href: '/favicon.png' }]
   ],
   themeConfig: {
     nav: [
-      { text: 'v1.0.1', link: '/#' },
+      { text: 'v1.0.0', link: '/#' },
     ],
     repo: 'creativetimofficial/vuetify-material-dashboard',
     sidebar: [
