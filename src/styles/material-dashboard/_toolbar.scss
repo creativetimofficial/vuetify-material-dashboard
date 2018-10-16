@@ -3,6 +3,10 @@
   border-radius: $border-radius-base;
   margin-bottom: $margin-general;
 
+  &:not(.v-toolbar--fixed) .v-toolbar__content {
+    margin-left: $toolbar-margin-left;
+  }
+
   @include toolbar-colors('bg-danger', $brand-danger);
   @include toolbar-colors('bg-warning', $brand-warning);
   @include toolbar-colors('bg-primary', $brand-primary);
@@ -62,5 +66,11 @@
         padding: 0;
       }
     }
+  }
+}
+
+@media all and (max-width: 990px) {
+  .v-toolbar:not(.v-toolbar--fixed) .v-toolbar__content {
+    margin-left: 0;
   }
 }
