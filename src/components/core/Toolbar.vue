@@ -1,7 +1,7 @@
 <template>
   <v-toolbar
     id="core-toolbar"
-    app
+
     flat
     prominent
     style="background: #eee;"
