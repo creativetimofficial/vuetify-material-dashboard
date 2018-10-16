@@ -23,7 +23,7 @@
             color="white"
           >
             <v-img
-              src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Vue.js_Logo.svg/400px-Vue.js_Logo.svg.png"
+              :src="logo"
               height="34"
               contain
             />
@@ -74,13 +74,8 @@ import {
 } from 'vuex'
 
 export default {
-  props: {
-    opened: {
-      type: Boolean,
-      default: false
-    }
-  },
   data: () => ({
+    logo: './img/vuetifylogo.png',
     links: [
       {
         to: '/',
@@ -149,6 +144,11 @@ export default {
         margin-top: auto;
         margin-bottom: 17px;
       }
+    }
+
+    .v-image__image--contain {
+      top: 9px;
+      height: 60%;
     }
   }
 </style>
