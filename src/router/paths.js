@@ -5,7 +5,7 @@
  */
 export default [
   {
-    path: '',
+    path: '/dashboard',
     // Relative to /src/views
     view: 'Dashboard'
   },

@@ -78,7 +78,7 @@ export default {
     logo: './img/vuetifylogo.png',
     links: [
       {
-        to: '/',
+        to: '/dashboard',
         icon: 'mdi-view-dashboard',
         text: 'Dashboard'
       },
