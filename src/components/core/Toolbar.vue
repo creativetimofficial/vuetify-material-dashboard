@@ -31,6 +31,7 @@
         py-2
       >
         <v-text-field
+          v-if="responsiveInput"
           class="mr-4 mt-2 purple-input"
           label="Search..."
           hide-details
@@ -107,7 +108,8 @@ export default {
       'Another One'
     ],
     title: null,
-    responsive: false
+    responsive: false,
+    responsiveInput: false
   }),
 
   watch: {
@@ -135,8 +137,10 @@ export default {
     onResponsiveInverted () {
       if (window.innerWidth < 991) {
         this.responsive = true
+        this.responsiveInput = false
       } else {
         this.responsive = false
+        this.responsiveInput = true
       }
     }
   }

@@ -64,18 +64,3 @@
     }
   }
 }
-
-@media all and (max-width: 550px) {
-  .v-toolbar__content {
-    flex-direction: column;
-    height: auto !important;
-
-    .v-toolbar-title {
-      width: 100%;
-    }
-  }
-
-  .v-content {
-    padding-top: 121px !important;
-  }
-}
