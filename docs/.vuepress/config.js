@@ -14,6 +14,9 @@ module.exports = {
     ['link', { rel: 'icon', type: 'image/png', sizes: '96x96', href: '/favicon.ico' }]
   ],
   themeConfig: {
+    nav: [
+      { text: 'v1.0.1', link: '/#' },
+    ],
     repo: 'creativetimofficial/vuetify-material-dashboard',
     sidebar: [
       {

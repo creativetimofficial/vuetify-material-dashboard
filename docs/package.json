@@ -13,7 +13,6 @@
     "markdown-it-container": "^2.0.0",
     "ncp": "^2.0.0",
     "vuepress": "^0.14.4",
-    "vuetify": "^1.2.9",
     "webpack": "^4.20.2"
   },
   "author": "Creative Tim <hello@creative-tim.com>",
