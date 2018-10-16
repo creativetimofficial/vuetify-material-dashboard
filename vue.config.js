@@ -3,4 +3,4 @@ module.exports = {
     disableHostCheck: true
   },
   baseUrl: '/vuetify-material-dashboard/'
-}
+};
