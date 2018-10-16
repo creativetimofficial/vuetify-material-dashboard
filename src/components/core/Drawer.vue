@@ -34,6 +34,15 @@
         </v-list-tile>
         <v-divider/>
         <v-list-tile
+          v-if="responsive"
+        >
+        <v-text-field
+          class="purple-input search-input"
+          label="Search..."
+          color="purple"
+        />
+        </v-list-tile>
+        <v-list-tile
           v-for="(link, i) in links"
           :key="i"
           :to="link.to"
@@ -112,7 +121,8 @@ export default {
         icon: 'mdi-bell',
         text: 'Notifications'
       }
-    ]
+    ],
+    responsive: false
   }),
   computed: {
     ...mapState('app', ['image', 'color']),
@@ -128,9 +138,22 @@ export default {
       return this.$t('Layout.View.items')
     }
   },
-
+  mounted () {
+    this.onResponsiveInverted()
+    window.addEventListener('resize', this.onResponsiveInverted)
+  },
+  beforeDestroy () {
+    window.removeEventListener('resize', this.onResponsiveInverted)
+  },
   methods: {
-    ...mapMutations('app', ['setDrawer', 'toggleDrawer'])
+    ...mapMutations('app', ['setDrawer', 'toggleDrawer']),
+    onResponsiveInverted () {
+      if (window.innerWidth < 991) {
+        this.responsive = true
+      } else {
+        this.responsive = false
+      }
+    }
   }
 }
 </script>
@@ -149,6 +172,12 @@ export default {
     .v-image__image--contain {
       top: 9px;
       height: 60%;
+    }
+
+    .search-input {
+      margin-bottom: 30px !important;
+      padding-left: 15px;
+      padding-right: 15px;
     }
   }
 </style>
