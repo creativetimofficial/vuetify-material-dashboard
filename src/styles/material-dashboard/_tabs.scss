@@ -10,6 +10,10 @@
 
   .v-tabs__item {
     border-radius: $border-radius-base;
+
+    .v-icon {
+      color: $white;
+    }
   }
 
   .v-tabs__slider-wrapper .white{
