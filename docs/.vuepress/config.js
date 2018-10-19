@@ -11,13 +11,16 @@ module.exports = {
   },
   head: [
     ['link', { rel: 'stylesheet', href: `https://fonts.googleapis.com/icon?family=Material+Icons` }],
+    ['link', { rel: 'stylesheet', href: `https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons` }],
+    ['link', { rel: 'stylesheet', href: `https://use.fontawesome.com/releases/v5.4.1/css/all.css` }],
     ['link', { rel: 'icon', type: 'image/png', sizes: '96x96', href: '/favicon.png' }]
   ],
   themeConfig: {
     nav: [
-      { text: 'v1.0.0', link: '/#' },
+      { text: 'Live Preview', link: 'https://demos.creative-tim.com/vuetify-material-dashboard' },
+      { text: 'Github', link: 'https://github.com/creativetimofficial/vuetify-material-dashboard' },
+      { text: 'Twitter', link: 'https://twitter.com/creativetim' },
     ],
-    repo: 'creativetimofficial/vuetify-material-dashboard',
     sidebar: [
       {
         title: 'General Information',
