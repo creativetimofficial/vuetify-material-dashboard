@@ -31,11 +31,7 @@ Vuex is a state management pattern + library for Vue.js applications. It serves 
 
 We used the latest 3.x [Vue CLI](https://github.com/vuejs/vue-cli) which aims to reduce project configuration
 to as little as possible. Almost everything is inside `package.json` + some other related files such as
-`.babel.config.js`, `.eslintrc.js` and `.postcssrc.js`
-
-## Element-UI
-
-Vuetify Material Dashboard also uses [element-ui](https://vuetifyjs.com/en/components/api-explorer) components and restyles them to achieve consistent and homogenous interface with the existing custom components and general UI of the dashboard.
+`.babel.config.js`, `.eslintrc.js` and `.postcssrc.js`.
 
 Let us know what you think and what we can improve below. And good luck with development!
 
