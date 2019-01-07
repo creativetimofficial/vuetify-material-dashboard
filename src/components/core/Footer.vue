@@ -9,9 +9,20 @@
         v-for="link in links"
         :key="link.name"
       >
-        <a
-          :href="link.Link"
-          class="tertiary--text footer-links">{{ link.name }}</a>
+        <template
+          v-if="link.route"
+          >
+          <router-link
+            to="link.Link">
+            {{ link.name }}
+          </router-link>
+        </template>
+        <template
+          v-else>
+          <a
+            :href="link.Link"
+            class="tertiary--text footer-links">{{ link.name }}</a>
+        </template>
       </span>
     </div>
     <v-spacer/>
@@ -33,7 +44,7 @@
 export default {
   data: () => ({
     links: [
-      { name: 'Home', Link: '/dashboard' },
+      { name: 'Home', Link: '/dashboard', route: true },
       { name: 'Creative Tim', Link: 'https://www.creative-tim.com' },
       { name: 'About Us', Link: 'https://creative-tim.com/presentation' },
       { name: 'Blog', Link: 'https://blog.creative-tim.com' }
