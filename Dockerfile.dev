@@ -1,0 +1,17 @@
+FROM node:lts
+
+MAINTAINER Bryan Waters
+
+WORKDIR /usr/src/app
+
+COPY package*.json ./
+COPY yarn.lock ./
+
+RUN yarn install
+
+COPY . /usr/src/app
+
+
+EXPOSE 8080
+
+CMD yarn serve || cat /root/.npm/_logs/*.log
