@@ -11,6 +11,7 @@
   >
     <v-img
       :src="image"
+      :gradient="sidebarOverlayGradiant"
       height="100%"
     >
       <v-layout
@@ -136,6 +137,9 @@ export default {
     },
     items () {
       return this.$t('Layout.View.items')
+    },
+    sidebarOverlayGradiant () {
+      return `${this.$store.state.app.sidebarBackgroundColor}, ${this.$store.state.app.sidebarBackgroundColor}`
     }
   },
   mounted () {
@@ -178,6 +182,10 @@ export default {
       margin-bottom: 30px !important;
       padding-left: 15px;
       padding-right: 15px;
+    }
+
+    div.v-responsive.v-image > div.v-responsive__content {
+      overflow-y: auto;
     }
   }
 </style>
