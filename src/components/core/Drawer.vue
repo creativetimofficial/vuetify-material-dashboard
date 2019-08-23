@@ -2,190 +2,143 @@
   <v-navigation-drawer
     id="app-drawer"
     v-model="inputValue"
+    :src="image"
     app
+    color="grey darken-2"
     dark
     floating
-    persistent
     mobile-break-point="991"
+    persistent
     width="260"
   >
-    <v-img
-      :src="image"
-      :gradient="sidebarOverlayGradiant"
-      height="100%"
-    >
-      <v-layout
-        class="fill-height"
-        tag="v-list"
-        column
+    <template v-slot:img="attrs">
+      <v-img
+        v-bind="attrs"
+        gradient="to top, rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)"
+      />
+    </template>
+
+    <v-list-item two-line>
+      <v-list-item-avatar color="white">
+        <v-img
+          src="https://cdn.vuetifyjs.com/images/logos/v.png"
+          height="34"
+          contain
+        />
+      </v-list-item-avatar>
+
+      <v-list-item-title class="title">
+        VUETIFY MD
+      </v-list-item-title>
+    </v-list-item>
+
+    <v-divider class="mx-3 mb-3" />
+
+    <v-list nav>
+      <!-- Bug in Vuetify for first child of v-list not receiving proper border-radius -->
+      <div />
+
+      <v-list-item
+        v-for="(link, i) in links"
+        :key="i"
+        :to="link.to"
+        active-class="primary white--text"
       >
-        <v-list-tile avatar>
-          <v-list-tile-avatar
-            color="white"
-          >
-            <v-img
-              :src="logo"
-              height="34"
-              contain
-            />
-          </v-list-tile-avatar>
-          <v-list-tile-title class="title">
-            Vuetify MD
-          </v-list-tile-title>
-        </v-list-tile>
-        <v-divider/>
-        <v-list-tile
-          v-if="responsive"
-        >
-          <v-text-field
-            class="purple-input search-input"
-            label="Search..."
-            color="purple"
-          />
-        </v-list-tile>
-        <v-list-tile
-          v-for="(link, i) in links"
-          :key="i"
-          :to="link.to"
-          :active-class="color"
-          avatar
-          class="v-list-item"
-        >
-          <v-list-tile-action>
-            <v-icon>{{ link.icon }}</v-icon>
-          </v-list-tile-action>
-          <v-list-tile-title
-            v-text="link.text"
-          />
-        </v-list-tile>
-        <v-list-tile
+        <v-list-item-action>
+          <v-icon>{{ link.icon }}</v-icon>
+        </v-list-item-action>
+
+        <v-list-item-title v-text="link.text" />
+      </v-list-item>
+    </v-list>
+
+    <template v-slot:append>
+      <v-list nav>
+        <v-list-item
           disabled
-          active-class="primary"
-          class="v-list-item v-list__tile--buy"
           to="/upgrade"
         >
-          <v-list-tile-action>
+          <v-list-item-action>
             <v-icon>mdi-package-up</v-icon>
-          </v-list-tile-action>
-          <v-list-tile-title class="font-weight-light">
+          </v-list-item-action>
+
+          <v-list-item-title class="font-weight-light">
             Upgrade To PRO
-          </v-list-tile-title>
-        </v-list-tile>
-      </v-layout>
-    </v-img>
+          </v-list-item-title>
+        </v-list-item>
+      </v-list>
+    </template>
   </v-navigation-drawer>
 </template>
 
 <script>
 // Utilities
-import {
-  mapMutations,
-  mapState
-} from 'vuex'
+  import {
+    mapMutations,
+    mapState
+  } from 'vuex'
 
-export default {
-  data: () => ({
-    logo: './img/vuetifylogo.png',
-    links: [
-      {
-        to: '/dashboard',
-        icon: 'mdi-view-dashboard',
-        text: 'Dashboard'
-      },
-      {
-        to: '/user-profile',
-        icon: 'mdi-account',
-        text: 'User Profile'
-      },
-      {
-        to: '/table-list',
-        icon: 'mdi-clipboard-outline',
-        text: 'Table List'
-      },
-      {
-        to: '/typography',
-        icon: 'mdi-format-font',
-        text: 'Typography'
-      },
-      {
-        to: '/icons',
-        icon: 'mdi-chart-bubble',
-        text: 'Icons'
-      },
-      {
-        to: '/maps',
-        icon: 'mdi-map-marker',
-        text: 'Maps'
-      },
-      {
-        to: '/notifications',
-        icon: 'mdi-bell',
-        text: 'Notifications'
-      }
-    ],
-    responsive: false
-  }),
-  computed: {
-    ...mapState('app', ['image', 'color']),
-    inputValue: {
-      get () {
-        return this.$store.state.app.drawer
-      },
-      set (val) {
-        this.setDrawer(val)
+  export default {
+    props: {
+      opened: {
+        type: Boolean,
+        default: false
       }
     },
-    items () {
-      return this.$t('Layout.View.items')
-    },
-    sidebarOverlayGradiant () {
-      return `${this.$store.state.app.sidebarBackgroundColor}, ${this.$store.state.app.sidebarBackgroundColor}`
-    }
-  },
-  mounted () {
-    this.onResponsiveInverted()
-    window.addEventListener('resize', this.onResponsiveInverted)
-  },
-  beforeDestroy () {
-    window.removeEventListener('resize', this.onResponsiveInverted)
-  },
-  methods: {
-    ...mapMutations('app', ['setDrawer', 'toggleDrawer']),
-    onResponsiveInverted () {
-      if (window.innerWidth < 991) {
-        this.responsive = true
-      } else {
-        this.responsive = false
+    data: () => ({
+      links: [
+        {
+          to: '/',
+          icon: 'mdi-view-dashboard',
+          text: 'Dashboard'
+        },
+        {
+          to: '/user-profile',
+          icon: 'mdi-account',
+          text: 'User Profile'
+        },
+        {
+          to: '/table-list',
+          icon: 'mdi-clipboard-outline',
+          text: 'Table List'
+        },
+        {
+          to: '/typography',
+          icon: 'mdi-format-font',
+          text: 'Typography'
+        },
+        {
+          to: '/icons',
+          icon: 'mdi-chart-bubble',
+          text: 'Icons'
+        },
+        {
+          to: '/maps',
+          icon: 'mdi-map-marker',
+          text: 'Maps'
+        },
+        {
+          to: '/notifications',
+          icon: 'mdi-bell',
+          text: 'Notifications'
+        }
+      ]
+    }),
+
+    computed: {
+      ...mapState('app', ['image', 'color']),
+      inputValue: {
+        get () {
+          return this.$store.state.app.drawer
+        },
+        set (val) {
+          this.setDrawer(val)
+        }
       }
+    },
+
+    methods: {
+      ...mapMutations('app', ['setDrawer', 'toggleDrawer'])
     }
   }
-}
 </script>
-
-<style lang="scss">
-  #app-drawer {
-    .v-list__tile {
-      border-radius: 4px;
-
-      &--buy {
-        margin-top: auto;
-        margin-bottom: 17px;
-      }
-    }
-
-    .v-image__image--contain {
-      top: 9px;
-      height: 60%;
-    }
-
-    .search-input {
-      margin-bottom: 30px !important;
-      padding-left: 15px;
-      padding-right: 15px;
-    }
-
-    div.v-responsive.v-image > div.v-responsive__content {
-      overflow-y: auto;
-    }
-  }
-</style>

@@ -1,20 +1,22 @@
 <template>
   <v-app>
-    <core-filter />
-
-    <core-toolbar />
+    <core-app-bar />
 
     <core-drawer />
 
     <core-view />
+
+    <core-footer />
   </v-app>
 </template>
 
-<style lang="scss">
-@import '@/styles/index.scss';
-
-/* Remove in 1.2 */
-.v-datatable thead th.column.sortable i {
-  vertical-align: unset;
-}
-</style>
+<script>
+  export default {
+    components: {
+      CoreDrawer: () => import('@/components/core/Drawer'),
+      CoreFooter: () => import('@/components/core/Footer'),
+      CoreAppBar: () => import('@/components/core/AppBar'),
+      CoreView: () => import('@/components/core/View')
+    }
+  }
+</script>

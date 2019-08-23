@@ -1,8 +1,10 @@
 .DS_Store
 node_modules
 /dist
-package-lock.json
-/docs/.vuepress/dist
+
+/tests/e2e/videos/
+/tests/e2e/screenshots/
+
 # local env files
 .env.local
 .env.*.local
@@ -19,4 +21,4 @@ yarn-error.log*
 *.ntvs*
 *.njsproj
 *.sln
-*.sw*
+*.sw?
