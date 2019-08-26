@@ -62,19 +62,15 @@
                 <th/>
                 <td>
                   <v-btn
-                    class="subheading white--text font-weight-light"
-                    round
-                    large
+                    class="white--text font-weight-light"
                     color="grey"
                     disabled
                   >Current Version</v-btn>
                 </td>
                 <td>
                   <v-btn
-                    class="subheading white--text font-weight-light"
-                    round
-                    large
-                    color="cyan"
+                    class="font-weight-light"
+                    color="success"
                     link
                     target="_blank"
                     href="https://www.creative-tim.com/product/vuetify-material-dashboard-pro"
