@@ -55,7 +55,6 @@
     <template v-slot:append>
       <v-list nav>
         <v-list-item
-          disabled
           to="/upgrade"
         >
           <v-list-item-action>

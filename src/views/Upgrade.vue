@@ -36,14 +36,14 @@
                   Plugins
                 </th>
                 <td>2</td>
-                <td>15</td>
+                <td>4</td>
               </tr>
               <tr>
                 <th class="text-left font-weight-light subheading">
                   Example Pages
                 </th>
                 <td>3</td>
-                <td>27</td>
+                <td>8</td>
               </tr>
               <tr>
                 <th class="text-left font-weight-light subheading">
@@ -78,14 +78,14 @@
               <tr>
                 <th />
                 <td>Free</td>
-                <td>Just $59</td>
+                <td>Just $79</td>
               </tr>
               <tr>
                 <th />
                 <td>
                   <v-btn
                     class="subheading white--text font-weight-light"
-                    round
+                    rounded
                     large
                     color="grey"
                     disabled
@@ -96,9 +96,12 @@
                 <td>
                   <v-btn
                     class="subheading white--text font-weight-light"
-                    round
+                    rounded
                     large
                     color="cyan"
+                    link
+                    target="_blank"
+                    href="https://www.creative-tim.com/product/vuetify-material-dashboard-pro"
                   >
                     Upgrade to Pro
                   </v-btn>
