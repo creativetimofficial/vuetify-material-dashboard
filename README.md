@@ -98,46 +98,45 @@ Within the download you'll find the following directories and files:
 
 ```
 vuetify-material-dashboard
+├── ISSUE_TEMPLATE.md
+├── LICENSE.md
 ├── README.md
 ├── babel.config.js
+├── cypress.json
+├── jest.config.js
 ├── package.json
+├── postcss.config.js
 ├── public
 │   ├── favicon.ico
+│   ├── img
 │   └── index.html
 ├── src
 │   ├── App.vue
 │   ├── assets
+│   │   └── vuetify.svg
 │   ├── components
+│   │   ├── base
+│   │   │   └── Card.vue
 │   │   ├── core
+│   │   │   ├── AppBar.vue
 │   │   │   ├── Drawer.vue
 │   │   │   ├── Filter.vue
 │   │   │   ├── Footer.vue
-│   │   │   ├── Toolbar.vue
 │   │   │   └── View.vue
 │   │   ├── helper
 │   │   │   └── Offset.vue
-│   │   ├── index.js
 │   │   └── material
 │   │       ├── Card.vue
 │   │       ├── ChartCard.vue
 │   │       ├── Notification.vue
 │   │       └── StatsCard.vue
-│   ├── i18n
-│   │   └── index.js
-│   ├── lang
-│   │   ├── en
-│   │   │   ├── Common.json
-│   │   │   ├── Core
-│   │   │   │   ├── Footer.json
-│   │   │   │   └── Toolbar.json
-│   │   │   └── Home.json
-│   │   └── index.js
 │   ├── main.js
 │   ├── plugins
 │   │   ├── axios.js
+│   │   ├── base.js
 │   │   ├── chartist.js
+│   │   ├── components.js
 │   │   ├── index.js
-│   │   ├── theme.js
 │   │   └── vuetify.js
 │   ├── router
 │   │   ├── index.js
@@ -153,9 +152,6 @@ vuetify-material-dashboard
 │   │   │   └── index.js
 │   │   ├── mutations.js
 │   │   └── state.js
-│   ├── styles
-│   │   ├── index.scss
-│   │   └── material-dashboard
 │   ├── utils
 │   │   └── vuex.js
 │   └── views
@@ -167,6 +163,17 @@ vuetify-material-dashboard
 │       ├── Typography.vue
 │       ├── Upgrade.vue
 │       └── UserProfile.vue
+├── tests
+│   ├── e2e
+│   │   ├── plugins
+│   │   │   └── index.js
+│   │   ├── specs
+│   │   │   └── test.js
+│   │   └── support
+│   │       ├── commands.js
+│   │       └── index.js
+│   └── unit
+│       └── example.spec.js
 ├── vue.config.js
 └── yarn.lock
 ```
