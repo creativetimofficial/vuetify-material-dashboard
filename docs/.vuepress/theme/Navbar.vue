@@ -88,7 +88,7 @@ import {
       title: 'Vuetify Material Dashboard',
       responsive: false,
       responsiveLink: true,
-      version: '1.0.0',
+      version: '2.0.0',
     }),
 
     props: {
