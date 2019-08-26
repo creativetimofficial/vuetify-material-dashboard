@@ -59,8 +59,7 @@
           />
         </v-list-tile>
         <v-list-tile
-          disabled
-          active-class="primary"
+          active-class="success"
           class="v-list-item v-list__tile--buy"
           to="/upgrade"
         >
