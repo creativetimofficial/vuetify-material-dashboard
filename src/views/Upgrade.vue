@@ -8,8 +8,8 @@
       >
         <material-card
           color="primary"
-          title="Vue Material Dashboard PRO"
-          text="Are you looking for more components? Please check our Premium Version of Vue Material Dashboard."
+          title="Vuetify Material Dashboard PRO"
+          text="Are you looking for more components? Please check our Premium Version of Vuetify Material Dashboard PRO."
         >
           <table class="v-table">
             <thead>
