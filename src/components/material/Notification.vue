@@ -11,24 +11,24 @@
 </template>
 
 <script>
-  export default {
-    name: 'MaterialNotification',
+export default {
+  name: "MaterialNotification",
 
-    inheritAttrs: false,
+  inheritAttrs: false,
 
-    props: {
-      dark: {
-        type: Boolean,
-        default: true
-      },
-      elevation: {
-        type: [Number, String],
-        default: 6
-      },
-      value: {
-        type: Boolean,
-        default: true
-      }
+  props: {
+    dark: {
+      type: Boolean,
+      default: true
+    },
+    elevation: {
+      type: [Number, String],
+      default: 6
+    },
+    value: {
+      type: Boolean,
+      default: true
     }
   }
+};
 </script>

@@ -54,9 +54,7 @@
 
     <template v-slot:append>
       <v-list nav>
-        <v-list-item
-          to="/upgrade"
-        >
+        <v-list-item to="/upgrade">
           <v-list-item-action>
             <v-icon>mdi-package-up</v-icon>
           </v-list-item-action>
@@ -72,72 +70,69 @@
 
 <script>
 // Utilities
-  import {
-    mapMutations,
-    mapState
-  } from 'vuex'
+import { mapMutations, mapState } from "vuex";
 
-  export default {
-    props: {
-      opened: {
-        type: Boolean,
-        default: false
-      }
-    },
-    data: () => ({
-      links: [
-        {
-          to: '/',
-          icon: 'mdi-view-dashboard',
-          text: 'Dashboard'
-        },
-        {
-          to: '/user-profile',
-          icon: 'mdi-account',
-          text: 'User Profile'
-        },
-        {
-          to: '/table-list',
-          icon: 'mdi-clipboard-outline',
-          text: 'Table List'
-        },
-        {
-          to: '/typography',
-          icon: 'mdi-format-font',
-          text: 'Typography'
-        },
-        {
-          to: '/icons',
-          icon: 'mdi-chart-bubble',
-          text: 'Icons'
-        },
-        {
-          to: '/maps',
-          icon: 'mdi-map-marker',
-          text: 'Maps'
-        },
-        {
-          to: '/notifications',
-          icon: 'mdi-bell',
-          text: 'Notifications'
-        }
-      ]
-    }),
-
-    computed: {
-      ...mapState('app', ['image', 'color']),
-      inputValue: {
-        get () {
-          return this.$store.state.app.drawer
-        },
-        set (val) {
-          this.setDrawer(val)
-        }
-      }
-    },
-
-    methods: {
-      ...mapMutations('app', ['setDrawer', 'toggleDrawer'])
+export default {
+  props: {
+    opened: {
+      type: Boolean,
+      default: false
     }
+  },
+  data: () => ({
+    links: [
+      {
+        to: "/",
+        icon: "mdi-view-dashboard",
+        text: "Dashboard"
+      },
+      {
+        to: "/user-profile",
+        icon: "mdi-account",
+        text: "User Profile"
+      },
+      {
+        to: "/table-list",
+        icon: "mdi-clipboard-outline",
+        text: "Table List"
+      },
+      {
+        to: "/typography",
+        icon: "mdi-format-font",
+        text: "Typography"
+      },
+      {
+        to: "/icons",
+        icon: "mdi-chart-bubble",
+        text: "Icons"
+      },
+      {
+        to: "/maps",
+        icon: "mdi-map-marker",
+        text: "Maps"
+      },
+      {
+        to: "/notifications",
+        icon: "mdi-bell",
+        text: "Notifications"
+      }
+    ]
+  }),
+
+  computed: {
+    ...mapState("app", ["image", "color"]),
+    inputValue: {
+      get() {
+        return this.$store.state.app.drawer;
+      },
+      set(val) {
+        this.setDrawer(val);
+      }
+    }
+  },
+
+  methods: {
+    ...mapMutations("app", ["setDrawer", "toggleDrawer"])
   }
+};
 </script>

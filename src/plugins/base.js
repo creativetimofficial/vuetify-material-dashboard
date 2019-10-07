@@ -1,4 +1,4 @@
-import Vue from 'vue'
-import BaseCard from '@/components/base/Card'
+import Vue from "vue";
+import BaseCard from "@/components/base/Card";
 
-Vue.components(BaseCard.name, BaseCard)
+Vue.components(BaseCard.name, BaseCard);

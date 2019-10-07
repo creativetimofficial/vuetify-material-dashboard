@@ -19,15 +19,15 @@
 
 <style>
 .mapouter {
-  text-align:right;
-  height:100%;
-  width:100%;
+  text-align: right;
+  height: 100%;
+  width: 100%;
   position: absolute;
 }
 .gmap_canvas {
-  overflow:hidden;
-  background:none!important;
-  height:100%;
-  width:100%;
+  overflow: hidden;
+  background: none !important;
+  height: 100%;
+  width: 100%;
 }
 </style>

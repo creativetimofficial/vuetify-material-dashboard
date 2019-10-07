@@ -5,39 +5,39 @@
  */
 export default [
   {
-    path: '',
+    path: "",
     // Relative to /src/views
-    view: 'Dashboard'
+    view: "Dashboard"
   },
   {
-    path: '/user-profile',
-    name: 'User Profile',
-    view: 'UserProfile'
+    path: "/user-profile",
+    name: "User Profile",
+    view: "UserProfile"
   },
   {
-    path: '/table-list',
-    name: 'Table List',
-    view: 'TableList'
+    path: "/table-list",
+    name: "Table List",
+    view: "TableList"
   },
   {
-    path: '/typography',
-    view: 'Typography'
+    path: "/typography",
+    view: "Typography"
   },
   {
-    path: '/icons',
-    view: 'Icons'
+    path: "/icons",
+    view: "Icons"
   },
   {
-    path: '/maps',
-    view: 'Maps'
+    path: "/maps",
+    view: "Maps"
   },
   {
-    path: '/notifications',
-    view: 'Notifications'
+    path: "/notifications",
+    view: "Notifications"
   },
   {
-    path: '/upgrade',
-    name: 'Upgrade to PRO',
-    view: 'Upgrade'
+    path: "/upgrade",
+    name: "Upgrade to PRO",
+    view: "Upgrade"
   }
-]
+];

@@ -1,6 +1,6 @@
-import Vue from 'vue'
+import Vue from "vue";
 
 // Lib imports
-import axios from 'axios'
+import axios from "axios";
 
-Vue.prototype.$http = axios
+Vue.prototype.$http = axios;

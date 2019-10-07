@@ -1,11 +1,7 @@
 <template>
   <v-container>
     <v-row justify="center">
-      <v-col
-        cols="12"
-        sm="10"
-        md="8"
-      >
+      <v-col cols="12" sm="10" md="8">
         <material-card
           color="primary"
           title="Vue Material Dashboard PRO"

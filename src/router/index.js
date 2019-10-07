@@ -7,44 +7,42 @@
  */
 
 // Lib imports
-import Vue from 'vue'
-import VueAnalytics from 'vue-analytics'
-import Router from 'vue-router'
-import Meta from 'vue-meta'
+import Vue from "vue";
+import VueAnalytics from "vue-analytics";
+import Router from "vue-router";
+import Meta from "vue-meta";
 
 // Routes
-import paths from './paths'
+import paths from "./paths";
 
-function route (path, view, name) {
+function route(path, view, name) {
   return {
     name: name || view,
     path,
-    component: (resovle) => import(
-      `@/views/${view}.vue`
-    ).then(resovle)
-  }
+    component: resovle => import(`@/views/${view}.vue`).then(resovle)
+  };
 }
 
-Vue.use(Router)
+Vue.use(Router);
 
 // Create a new router
 const router = new Router({
-  mode: 'history',
-  routes: paths.map(path => route(path.path, path.view, path.name)).concat([
-    { path: '*', redirect: '/' }
-  ]),
-  scrollBehavior (to, from, savedPosition) {
+  mode: "history",
+  routes: paths
+    .map(path => route(path.path, path.view, path.name))
+    .concat([{ path: "*", redirect: "/" }]),
+  scrollBehavior(to, from, savedPosition) {
     if (savedPosition) {
-      return savedPosition
+      return savedPosition;
     }
     if (to.hash) {
-      return { selector: to.hash }
+      return { selector: to.hash };
     }
-    return { x: 0, y: 0 }
+    return { x: 0, y: 0 };
   }
-})
+});
 
-Vue.use(Meta)
+Vue.use(Meta);
 
 // Bootstrap Analytics
 // Set in .env
@@ -54,9 +52,9 @@ if (process.env.GOOGLE_ANALYTICS) {
     id: process.env.GOOGLE_ANALYTICS,
     router,
     autoTracking: {
-      page: process.env.NODE_ENV !== 'development'
+      page: process.env.NODE_ENV !== "development"
     }
-  })
+  });
 }
 
-export default router
+export default router;
