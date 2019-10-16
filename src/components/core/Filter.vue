@@ -23,13 +23,11 @@
     </v-btn>
     <v-card>
       <v-container grid-list-xl>
-        <v-row>
-          <v-col cols="12">
-            <div class="text-center body-2 text-uppercase sidebar-filter">
-              Sidebar Filters
-            </div>
+        <v-layout wrap>
+          <v-flex xs12>
+            <div class="text-xs-center body-2 text-uppercase sidebar-filter">Sidebar Filters</div>
 
-            <v-row justify-center>
+            <v-layout justify-center>
               <v-avatar
                 v-for="c in colors"
                 :key="c"
@@ -38,20 +36,18 @@
 
                 @click="setColor(c)"
               />
-            </v-row>
-            <v-divider class="mt-3" />
-          </v-col>
-
-          <v-col cols="12">
-            <div class="text-center body-2 text-uppercase sidebar-filter">
-              Images
-            </div>
-          </v-col>
-
-          <v-col
+            </v-layout>
+            <v-divider class="mt-3"/>
+          </v-flex>
+          <v-flex
+            xs12
+          >
+            <div class="text-xs-center body-2 text-uppercase sidebar-filter">Images</div>
+          </v-flex>
+          <v-flex
             v-for="img in images"
             :key="img"
-            cols="3"
+            xs3
           >
             <v-img
               :class="[image === img ? 'image-active' : '']"
@@ -59,29 +55,30 @@
               height="120"
               @click.native="setImage(img)"
             />
-          </v-col>
-
-          <v-col cols="12">
+          </v-flex>
+          <v-flex xs12>
             <v-btn
-              color="green"
+              href="https://www.creative-tim.com/product/vuetify-material-dashboard"
+              target="_blank"
+              color="success"
               block
             >
               Free Download
             </v-btn>
-          </v-col>
-
-          <v-col cols="12">
+          </v-flex>
+          <v-flex xs12>
             <v-btn
+              href="https://demos.creative-tim.com/vuetify-material-dashboard/documentation"
+              target="_blank"
               class="white--text"
-              color="purple"
+              color="primary"
               block
             >
               Documentation
             </v-btn>
-          </v-col>
-
-          <v-col cols="12">
-            <div class="text-center body-2 text-uppercase">
+          </v-flex>
+          <v-flex xs12>
+            <div class="text-xs-center body-2 text-uppercase">
               <div class=" sidebar-filter">
                 Thank You for Sharing!
               </div>
@@ -90,70 +87,70 @@
                 <v-btn
                   color="indigo"
                   class="mr-2 v-btn-facebook"
-                  dark
                   fab
                   icon
                   small
+                  round
                 >
                   <v-icon>mdi-facebook</v-icon>
                 </v-btn>
                 <v-btn
                   color="cyan"
                   class="v-btn-twitter"
-                  dark
                   fab
                   icon
                   small
+                  round
                 >
                   <v-icon>mdi-twitter</v-icon>
                 </v-btn>
               </div>
             </div>
-          </v-col>
-        </v-row>
+          </v-flex>
+        </v-layout>
       </v-container>
     </v-card>
   </v-menu>
 </template>
 
 <script>
-  // Utilities
-  import {
-    mapMutations,
-    mapState
-  } from 'vuex'
+// Utilities
+import {
+  mapMutations,
+  mapState
+} from 'vuex'
 
-  export default {
-    data: () => ({
-      colors: [
-        'primary',
-        'info',
-        'success',
-        'warning',
-        'danger'
-      ],
-      images: [
-        'https://demos.creative-tim.com/vue-material-dashboard/img/sidebar-1.23832d31.jpg',
-        'https://demos.creative-tim.com/vue-material-dashboard/img/sidebar-2.32103624.jpg',
-        'https://demos.creative-tim.com/vue-material-dashboard/img/sidebar-3.3a54f533.jpg',
-        'https://demos.creative-tim.com/vue-material-dashboard/img/sidebar-4.3b7e38ed.jpg'
-      ]
-    }),
+export default {
+  data: () => ({
+    colors: [
+      'primary',
+      'info',
+      'success',
+      'warning',
+      'danger'
+    ],
+    images: [
+      'https://demos.creative-tim.com/vue-material-dashboard/img/sidebar-1.23832d31.jpg',
+      'https://demos.creative-tim.com/vue-material-dashboard/img/sidebar-2.32103624.jpg',
+      'https://demos.creative-tim.com/vue-material-dashboard/img/sidebar-3.3a54f533.jpg',
+      'https://demos.creative-tim.com/vue-material-dashboard/img/sidebar-4.3b7e38ed.jpg'
+    ]
+  }),
 
-    computed: {
-      ...mapState('app', ['image', 'color']),
-      color () {
-        return this.$store.state.app.color
-      }
-    },
+  computed: {
+    ...mapState('app', ['image', 'color']),
+    color () {
+      return this.$store.state.app.color
+    }
+  },
 
-    methods: {
-      ...mapMutations('app', ['setImage']),
-      setColor (color) {
-        this.$store.state.app.color = color
-      }
+  methods: {
+    ...mapMutations('app', ['setImage']),
+    setColor (color) {
+      this.$store.state.app.color = color
     }
   }
+}
 </script>
 
 <style lang="scss">

@@ -1,20 +1,18 @@
 <template>
   <material-card
-    class="v-card--material-chart"
     v-bind="$attrs"
+    class="v-card--material-chart"
     v-on="$listeners"
   >
-    <template v-slot:header>
-      <chartist
-        :data="data"
-        :event-handlers="eventHandlers"
-        :options="options"
-        :ratio="ratio"
-        :responsive-options="responsiveOptions"
-        :type="type"
-        style="max-height: 150px;"
-      />
-    </template>
+    <chartist
+      slot="header"
+      :data="data"
+      :event-handlers="eventHandlers"
+      :options="options"
+      :ratio="ratio"
+      :responsive-options="responsiveOptions"
+      :type="type"
+    />
 
     <slot />
 
@@ -26,39 +24,37 @@
 </template>
 
 <script>
-  export default {
-    name: 'MaterialChartCard',
+export default {
+  inheritAttrs: false,
 
-    inheritAttrs: false,
-
-    props: {
-      data: {
-        type: Object,
-        default: () => ({})
-      },
-      eventHandlers: {
-        type: Array,
-        default: () => ([])
-      },
-      options: {
-        type: Object,
-        default: () => ({})
-      },
-      ratio: {
-        type: String,
-        default: undefined
-      },
-      responsiveOptions: {
-        type: Array,
-        default: () => ([])
-      },
-      type: {
-        type: String,
-        required: true,
-        validator: v => ['Bar', 'Line', 'Pie'].includes(v)
-      }
+  props: {
+    data: {
+      type: Object,
+      default: () => ({})
+    },
+    eventHandlers: {
+      type: Array,
+      default: () => ([])
+    },
+    options: {
+      type: Object,
+      default: () => ({})
+    },
+    ratio: {
+      type: String,
+      default: undefined
+    },
+    responsiveOptions: {
+      type: Array,
+      default: () => ([])
+    },
+    type: {
+      type: String,
+      required: true,
+      validator: v => ['Bar', 'Line', 'Pie'].includes(v)
     }
   }
+}
 </script>
 
 <style lang="scss">

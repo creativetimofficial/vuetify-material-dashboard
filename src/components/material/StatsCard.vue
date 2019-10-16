@@ -1,7 +1,7 @@
 <template>
   <material-card
-    class="v-card--material-stats"
     v-bind="$attrs"
+    class="v-card--material-stats"
     v-on="$listeners"
   >
     <v-card
@@ -11,32 +11,31 @@
       class="pa-4"
       dark
     >
-      <v-icon size="40">
+      <v-icon
+        size="40"
+      >
         {{ icon }}
       </v-icon>
     </v-card>
-
-    <div class="text-right">
+    <div class="text-xs-right">
       <p
-        class="body-2 grey--text font-weight-light mb-0"
+        class="category grey--text font-weight-light"
         v-text="title"
       />
-      <h3 class="headline font-weight-light text--primary">
+      <h3
+        class="title display-1 font-weight-light">
         {{ value }} <small>{{ smallValue }}</small>
       </h3>
     </div>
-
-    <v-divider />
 
     <template slot="actions">
       <v-icon
         :color="subIconColor"
         size="20"
-        class="mx-2"
+        class="mr-2"
       >
         {{ subIcon }}
       </v-icon>
-
       <span
         :class="subTextColor"
         class="caption font-weight-light"
@@ -47,49 +46,47 @@
 </template>
 
 <script>
-  import Card from './Card'
+import Card from './Card'
 
-  export default {
-    name: 'MaterialStatsCard',
+export default {
+  inheritAttrs: false,
 
-    inheritAttrs: false,
-
-    props: {
-      ...Card.props,
-      icon: {
-        type: String,
-        required: true
-      },
-      subIcon: {
-        type: String,
-        default: undefined
-      },
-      subIconColor: {
-        type: String,
-        default: undefined
-      },
-      subTextColor: {
-        type: String,
-        default: undefined
-      },
-      subText: {
-        type: String,
-        default: undefined
-      },
-      title: {
-        type: String,
-        default: undefined
-      },
-      value: {
-        type: String,
-        default: undefined
-      },
-      smallValue: {
-        type: String,
-        default: undefined
-      }
+  props: {
+    ...Card.props,
+    icon: {
+      type: String,
+      required: true
+    },
+    subIcon: {
+      type: String,
+      default: undefined
+    },
+    subIconColor: {
+      type: String,
+      default: undefined
+    },
+    subTextColor: {
+      type: String,
+      default: undefined
+    },
+    subText: {
+      type: String,
+      default: undefined
+    },
+    title: {
+      type: String,
+      default: undefined
+    },
+    value: {
+      type: String,
+      default: undefined
+    },
+    smallValue: {
+      type: String,
+      default: undefined
     }
   }
+}
 </script>
 
 <style lang="scss">
@@ -116,7 +113,6 @@
 
   .v-card__text {
     display: inline-block;
-    flex: 1 0 calc(100% - 120px);
     position: absolute;
     top: 0;
     right: 0;

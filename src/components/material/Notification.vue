@@ -1,9 +1,9 @@
 <template>
   <v-alert
     v-bind="$attrs"
-    :elevation="elevation"
+    :class="[`elevation-${elevation}`]"
     :value="value"
-    :dark="dark"
+    class="v-alert--notification"
     v-on="$listeners"
   >
     <slot />
@@ -11,24 +11,25 @@
 </template>
 
 <script>
-  export default {
-    name: 'MaterialNotification',
+export default {
+  inheritAttrs: false,
 
-    inheritAttrs: false,
-
-    props: {
-      dark: {
-        type: Boolean,
-        default: true
-      },
-      elevation: {
-        type: [Number, String],
-        default: 6
-      },
-      value: {
-        type: Boolean,
-        default: true
-      }
+  props: {
+    elevation: {
+      type: [Number, String],
+      default: 6
+    },
+    value: {
+      type: Boolean,
+      default: true
     }
   }
+}
 </script>
+
+<style>
+.v-alert--notification {
+  border-radius: 4px !important;
+  border-top: none !important;
+}
+</style>

@@ -9,34 +9,32 @@
 </template>
 
 <script>
-  export default {
-    name: 'HelperOffset',
+export default {
+  props: {
+    fullWidth: {
+      type: Boolean,
+      default: false
+    },
+    offset: {
+      type: [Number, String],
+      default: 0
+    }
+  },
 
-    props: {
-      fullWidth: {
-        type: Boolean,
-        default: false
-      },
-      offset: {
-        type: [Number, String],
-        default: 0
+  computed: {
+    classes () {
+      return {
+        'v-offset--full-width': this.fullWidth
       }
     },
-
-    computed: {
-      classes () {
-        return {
-          'v-offset--full-width': this.fullWidth
-        }
-      },
-      styles () {
-        return {
-          top: `-${this.offset}px`,
-          marginBottom: `-${this.offset}px`
-        }
+    styles () {
+      return {
+        top: `-${this.offset}px`,
+        marginBottom: `-${this.offset}px`
       }
     }
   }
+}
 </script>
 
 <style>
@@ -44,7 +42,6 @@
   margin: 0 auto;
   max-width: calc(100% - 32px);
   position: relative;
-  z-index: 1;
 }
 .v-offset--full-width {
   max-width: 100%;
