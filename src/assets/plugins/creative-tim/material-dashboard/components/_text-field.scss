@@ -1,0 +1,24 @@
+.theme--light {
+  &.v-text-field {
+    .v-input__control > .v-input__slot:before {
+      border-color: #d2d2d2;
+    }
+
+    &.v-input--has-state > .v-input__control > .v-input__slot:before {
+      border-color: #d2d2d2;
+    }
+  }
+}
+
+.v-text-field {
+  &.v-text-field--solo {
+    &:not(.v-text-field--solo-flat) > .v-input__control > .v-input__slot {
+      -webkit-box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
+      box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
+    }
+  }
+
+  & > .v-input__control > .v-input__slot {
+    margin-bottom: 0;
+  }
+}

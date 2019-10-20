@@ -5,6 +5,7 @@ import store from "./store";
 import "./plugins";
 import vuetify from "./plugins/vuetify";
 import { sync } from "vuex-router-sync";
+import "./assets/styles/styles.scss";
 
 sync(store, router);
 

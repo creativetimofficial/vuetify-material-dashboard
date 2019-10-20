@@ -1,22 +1,24 @@
 <template>
   <v-app>
-    <core-app-bar />
-
-    <core-drawer />
-
-    <core-view />
-
-    <core-footer />
+    <the-app-bar />
+    <the-drawer />
+    <the-view />
+    <the-footer />
   </v-app>
 </template>
 
 <script>
+import TheAppBar from "./components/TheAppBar";
+import TheView from "./components/TheView";
+import TheDrawer from "./components/TheDrawer";
+import TheFooter from "./components/TheFooter";
+
 export default {
   components: {
-    CoreDrawer: () => import("@/components/core/Drawer"),
-    CoreFooter: () => import("@/components/core/Footer"),
-    CoreAppBar: () => import("@/components/core/AppBar"),
-    CoreView: () => import("@/components/core/View")
+    TheAppBar,
+    TheDrawer,
+    TheView,
+    TheFooter
   }
 };
 </script>

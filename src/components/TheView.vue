@@ -8,6 +8,8 @@
 
 <script>
 export default {
-  name: "CoreView"
+  name: "TheView"
 };
 </script>
+
+<style scoped></style>

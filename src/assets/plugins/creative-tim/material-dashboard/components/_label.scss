@@ -1,0 +1,9 @@
+.theme--light {
+  &.v-label {
+    color: rgba(0, 0, 0, 0.3);
+  }
+
+  &.v-label.v-label {
+    font-size: 14px;
+  }
+}

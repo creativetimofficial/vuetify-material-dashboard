@@ -1,0 +1,16 @@
+.v-content {
+  .container--fluid {
+    padding-left  : 30px;
+    padding-right : 30px;
+  }
+}
+
+
+@media (max-width: 960px) {
+  .v-content {
+    .container--fluid {
+      padding-left  : 15px;
+      padding-right : 15px;
+    }
+  }
+}

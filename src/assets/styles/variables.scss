@@ -1,0 +1,21 @@
+@import "~vuetify/src/styles/styles";
+
+$font-size-root: 14px;
+
+$material-light: map-merge(
+  $material-light,
+  (
+    "background": map-get($grey, "lighten-3")
+  )
+);
+
+@import "~vuetify/src/components/VBtn/variables";
+
+$btn-font-sizes: map-merge(
+  $btn-font-sizes,
+  (
+    "default": 0.85rem
+  )
+);
+
+$btn-letter-spacing: 0;

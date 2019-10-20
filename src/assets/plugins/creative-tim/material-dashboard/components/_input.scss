@@ -1,0 +1,18 @@
+.theme--light {
+  &.v-input {
+    &:not(.v-input--is-disabled) {
+      input,
+      textarea {
+        color : #495057;
+      }
+    }
+  }
+}
+
+.v-input {
+  input,
+  textarea {
+    font-size: 14px;
+    font-weight: 400;
+  }
+}

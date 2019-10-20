@@ -2,46 +2,47 @@
   <v-container fluid>
     <v-row>
       <v-col cols="12" lg="4">
-        <material-chart-card
+        <ct-chart-card
           :data="dailySalesChart.data"
           :options="dailySalesChart.options"
-          color="info"
+          header-color="info"
           type="Line"
         >
           <h4 class="title font-weight-light">
             Daily Sales
           </h4>
 
-          <p class="category d-inline-flex font-weight-light">
+          <p class="category d-inline-flex font-weight-light mb-0">
             <v-icon color="green" small>
               mdi-arrow-up
             </v-icon>
-            <span class="green--text">55%</span>&nbsp; increase in today's sales
+            <span class="green--text">55%</span> increase in today's sales
           </p>
 
           <template v-slot:actions>
             <v-icon class="mr-2" small>
               mdi-clock-outline
             </v-icon>
-            <span class="caption grey--text font-weight-light"
-              >updated 4 minutes ago</span
-            >
+            <span class="caption grey--text font-weight-light">
+              updated 4 minutes ago
+            </span>
           </template>
-        </material-chart-card>
+        </ct-chart-card>
       </v-col>
 
       <v-col cols="12" lg="4">
-        <material-chart-card
+        <ct-chart-card
           :data="emailsSubscriptionChart.data"
           :options="emailsSubscriptionChart.options"
           :responsive-options="emailsSubscriptionChart.responsiveOptions"
-          color="red"
+          header-color="primary"
           type="Bar"
         >
           <h4 class="title font-weight-light">
             Email Subscription
           </h4>
-          <p class="category d-inline-flex font-weight-light">
+
+          <p class="d-inline-flex font-weight-light mb-0">
             Last Campaign Performance
           </p>
 
@@ -49,24 +50,25 @@
             <v-icon class="mr-2" small>
               mdi-clock-outline
             </v-icon>
-            <span class="caption grey--text font-weight-light"
-              >updated 10 minutes ago</span
-            >
+            <span class="caption grey--text font-weight-light">
+              updated 10 minutes ago
+            </span>
           </template>
-        </material-chart-card>
+        </ct-chart-card>
       </v-col>
 
       <v-col cols="12" lg="4">
-        <material-chart-card
+        <ct-chart-card
           :data="dataCompletedTasksChart.data"
           :options="dataCompletedTasksChart.options"
-          color="green"
+          header-color="green"
           type="Line"
         >
           <h3 class="title font-weight-light">
             Completed Tasks
           </h3>
-          <p class="category d-inline-flex font-weight-light">
+
+          <p class="d-inline-flex font-weight-light mb-0">
             Last Last Campaign Performance
           </p>
 
@@ -74,30 +76,30 @@
             <v-icon class="mr-2" small>
               mdi-clock-outline
             </v-icon>
-            <span class="caption grey--text font-weight-light"
-              >campaign sent 26 minutes ago</span
-            >
+            <span class="caption grey--text font-weight-light">
+              campaign sent 26 minutes ago
+            </span>
           </template>
-        </material-chart-card>
+        </ct-chart-card>
       </v-col>
 
       <v-col cols="12" sm="6" lg="3">
-        <material-stats-card
-          color="green"
-          icon="mdi-store"
-          title="Revenue"
-          value="$34,245"
+        <ct-stats-card
+          header-color="green"
+          header-icon="mdi-store"
+          header-title="Revenue"
+          header-value="$34,245"
           sub-icon="mdi-calendar"
           sub-text="Last 24 Hours"
         />
       </v-col>
 
       <v-col cols="12" sm="6" lg="3">
-        <material-stats-card
-          color="orange"
-          icon="mdi-content-copy"
-          title="Used Space"
-          value="49/50"
+        <ct-stats-card
+          header-color="orange"
+          header-icon="mdi-content-copy"
+          header-title="Used Space"
+          header-value="49/50"
           small-value="GB"
           sub-icon="mdi-alert"
           sub-icon-color="error"
@@ -107,39 +109,39 @@
       </v-col>
 
       <v-col cols="12" sm="6" lg="3">
-        <material-stats-card
-          color="red"
-          icon="mdi-information-outline"
-          title="Fixed Issues"
-          value="75"
+        <ct-stats-card
+          header-color="red"
+          header-icon="mdi-information-outline"
+          header-title="Fixed Issues"
+          header-value="75"
           sub-icon="mdi-tag"
           sub-text="Tracked from Github"
         />
       </v-col>
 
       <v-col cols="12" sm="6" lg="3">
-        <material-stats-card
-          color="info"
-          icon="mdi-twitter"
-          title="Followers"
-          value="+245"
+        <ct-stats-card
+          header-color="info"
+          header-icon="mdi-twitter"
+          header-title="Followers"
+          header-value="+245"
           sub-icon="mdi-update"
           sub-text="Just Updated"
         />
       </v-col>
 
       <v-col cols="12" lg="6">
-        <material-card
-          color="orange"
-          title="Employee Stats"
-          text="New employees on 15th September, 2016"
+        <ct-card
+          header-color="orange"
+          header-title="Employee Stats"
+          header-text="New employees on 15th September, 2016"
         >
           <v-data-table :headers="headers" :items="items" hide-default-footer />
-        </material-card>
+        </ct-card>
       </v-col>
 
       <v-col cols="12" lg="6">
-        <material-card class="card-tabs" color="green">
+        <ct-card class="card-tabs" header-color="green">
           <template v-slot:header>
             <v-tabs
               v-model="tabs"
@@ -321,7 +323,7 @@
               </v-list>
             </v-tab-item>
           </v-tabs-items>
-        </material-card>
+        </ct-card>
       </v-col>
     </v-row>
   </v-container>

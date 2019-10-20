@@ -1,0 +1,65 @@
+.v-app-bar {
+  .v-toolbar__title {
+    font-weight: 300;
+    color: #555;
+    font-size: 18px;
+    margin-bottom: 6px;
+  }
+
+  .v-toolbar__content,
+  .v-toolbar__extension {
+    padding: 0 15px 0 31px;
+  }
+
+  .v-btn--flat {
+    margin-left: 5px;
+
+    .v-icon {
+      font-size: 20px;
+      color: #555 !important;
+      margin-top: -3px;
+      top: 0;
+      position: relative;
+      margin-right: 3px;
+    }
+  }
+
+  .v-badge.v-badge--overlap {
+    .v-badge__badge {
+      top: -12px;
+      right: -6px;
+
+      .caption {
+        line-height: 1.35rem;
+      }
+
+      &.red {
+        border: 1px solid #fff !important;
+        height: 20px;
+        min-width: 20px;
+
+        span {
+          font-size: 9px !important;
+        }
+      }
+    }
+  }
+
+  //.v-toolbar__content {
+  //  .v-btn {
+  //    &.v-size--default:not(.v-btn--icon):not(.v-btn--fab),
+  //    &.v-size--large:not(.v-btn--icon):not(.v-btn--fab) {
+  //      margin-bottom: 5px;
+  //      padding: 10px 15px !important;
+  //    }
+  //  }
+  //
+  //  .theme--light.v-btn:not(.v-btn--flat):not(.v-btn--text):not(.v-btn--outlined) {
+  //    background-color: #fff;
+  //
+  //    .v-icon {
+  //      color: #999;
+  //    }
+  //  }
+  //}
+}

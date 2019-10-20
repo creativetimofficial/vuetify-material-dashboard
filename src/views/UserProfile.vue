@@ -2,13 +2,13 @@
   <v-container fill-height fluid>
     <v-row justify="center">
       <v-col cols="12" md="8">
-        <material-card
+        <ct-card
           color="green"
           title="Edit Profile"
           text="Complete your profile"
         >
           <v-form>
-            <v-container class="py-0">
+            <v-container class="pa-0">
               <v-row>
                 <v-col cols="12" md="4">
                   <v-text-field label="Company (disabled)" disabled />
@@ -19,40 +19,35 @@
                 </v-col>
 
                 <v-col cols="12" md="4">
-                  <v-text-field label="Email Address" class="purple-input" />
+                  <v-text-field label="Email Address" />
                 </v-col>
 
                 <v-col cols="12" md="6">
-                  <v-text-field label="First Name" class="purple-input" />
+                  <v-text-field label="First Name" />
                 </v-col>
 
                 <v-col cols="12" md="6">
-                  <v-text-field label="Last Name" class="purple-input" />
+                  <v-text-field label="Last Name" />
                 </v-col>
 
                 <v-col cols="12">
-                  <v-text-field label="Adress" class="purple-input" />
+                  <v-text-field label="Adress" />
                 </v-col>
 
                 <v-col cols="12" md="4">
-                  <v-text-field label="City" class="purple-input" />
+                  <v-text-field label="City" />
                 </v-col>
 
                 <v-col cols="12" md="4">
-                  <v-text-field label="Country" class="purple-input" />
+                  <v-text-field label="Country" />
                 </v-col>
 
                 <v-col cols="12" md="4">
-                  <v-text-field
-                    class="purple-input"
-                    label="Postal Code"
-                    type="number"
-                  />
+                  <v-text-field label="Postal Code" type="number" />
                 </v-col>
 
                 <v-col cols="12">
                   <v-textarea
-                    class="purple-input"
                     label="About Me"
                     value="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
                   />
@@ -66,7 +61,7 @@
               </v-row>
             </v-container>
           </v-form>
-        </material-card>
+        </ct-card>
       </v-col>
       <v-col cols="12" md="4">
         <material-card class="v-card-profile">
