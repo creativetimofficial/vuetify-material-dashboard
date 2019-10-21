@@ -1,5 +1,5 @@
 <template>
-  <ct-app-bar absolute app flat>
+  <v-app-bar app absolute flat height="75" color="transparent">
     <v-btn v-if="responsive" dark icon @click.stop="onClick">
       <v-icon>mdi-view-list</v-icon>
     </v-btn>
@@ -17,7 +17,7 @@
     <div class="mx-3" />
     <!-- Dashboard button -->
     <v-btn text style="min-width: 0;">
-      <ct-icon>mdi-view-dashboard</ct-icon>
+      <v-icon size="20">mdi-view-dashboard</v-icon>
     </v-btn>
     <!-- Notification button -->
     <v-menu bottom left offset-y transition="slide-y-transition">
@@ -52,7 +52,7 @@
         mdi-account
       </v-icon>
     </v-btn>
-  </ct-app-bar>
+  </v-app-bar>
 </template>
 
 <script>

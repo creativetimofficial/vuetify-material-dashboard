@@ -8,9 +8,7 @@
 
 // Lib imports
 import Vue from "vue";
-import VueAnalytics from "vue-analytics";
 import Router from "vue-router";
-import Meta from "vue-meta";
 
 // Routes
 import paths from "./paths";
@@ -41,20 +39,5 @@ const router = new Router({
     return { x: 0, y: 0 };
   }
 });
-
-Vue.use(Meta);
-
-// Bootstrap Analytics
-// Set in .env
-// https://github.com/MatteoGabriele/vue-analytics
-if (process.env.GOOGLE_ANALYTICS) {
-  Vue.use(VueAnalytics, {
-    id: process.env.GOOGLE_ANALYTICS,
-    router,
-    autoTracking: {
-      page: process.env.NODE_ENV !== "development"
-    }
-  });
-}
 
 export default router;

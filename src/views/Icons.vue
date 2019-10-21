@@ -2,13 +2,13 @@
   <v-container fill-height fluid>
     <v-row>
       <v-col cols="12">
-        <material-card color="green">
+        <ct-card header-color="green">
           <template v-slot:header>
             <div class="px-3">
               <div class="title font-weight-light mb-2">
                 Material Design Icons
               </div>
-              <div class="category font-weight-thin">
+              <div class="subtitle-1 font-weight-light">
                 See all available
                 <a
                   class="white--text"
@@ -33,7 +33,7 @@
               </v-tooltip>
             </v-col>
           </v-row>
-        </material-card>
+        </ct-card>
       </v-col>
 
       <v-col cols="auto" class="mx-auto">

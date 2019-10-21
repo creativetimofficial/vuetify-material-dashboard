@@ -3,9 +3,9 @@
     <v-row justify="center">
       <v-col cols="12" md="8">
         <ct-card
-          color="green"
-          title="Edit Profile"
-          text="Complete your profile"
+          header-color="green"
+          header-title="Edit Profile"
+          header-text="Complete your profile"
         >
           <v-form>
             <v-container class="pa-0">

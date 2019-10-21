@@ -5,7 +5,7 @@
         <ct-chart-card
           :data="dailySalesChart.data"
           :options="dailySalesChart.options"
-          header-color="info"
+          chart-color="info"
           type="Line"
         >
           <h4 class="title font-weight-light">
@@ -16,7 +16,7 @@
             <v-icon color="green" small>
               mdi-arrow-up
             </v-icon>
-            <span class="green--text">55%</span> increase in today's sales
+            <span class="green--text">55%</span>&nbsp;increase in today's sales
           </p>
 
           <template v-slot:actions>
@@ -35,7 +35,7 @@
           :data="emailsSubscriptionChart.data"
           :options="emailsSubscriptionChart.options"
           :responsive-options="emailsSubscriptionChart.responsiveOptions"
-          header-color="primary"
+          chart-color="primary"
           type="Bar"
         >
           <h4 class="title font-weight-light">
@@ -61,7 +61,7 @@
         <ct-chart-card
           :data="dataCompletedTasksChart.data"
           :options="dataCompletedTasksChart.options"
-          header-color="green"
+          chart-color="green"
           type="Line"
         >
           <h3 class="title font-weight-light">
@@ -331,6 +331,7 @@
 
 <script>
 export default {
+  name: "Dashboard",
   data() {
     return {
       dailySalesChart: {

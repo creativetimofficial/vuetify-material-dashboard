@@ -1,12 +1,15 @@
 import mixins from "vuetify/lib/util/mixins";
-import { VSheet } from "vuetify/lib";
-import CtCard from "./CtCard";
+import { VCard, VCardActions, VCardText, VDivider, VSheet } from "vuetify/lib";
 
-export default mixins(CtCard)
+export default mixins(VCard)
   .extend()
   .extend({
     name: "CtChartCard",
     props: {
+      chartColor: {
+        type: String,
+        default: "green"
+      },
       data: {
         type: Object,
         default: () => ({})
@@ -36,7 +39,8 @@ export default mixins(CtCard)
     computed: {
       classes() {
         return {
-          ...CtCard.options.computed.classes.call(this),
+          ...VCard.options.computed.classes.call(this),
+          "ct-card": true,
           "ct-chart-card": true
         };
       }
@@ -48,7 +52,7 @@ export default mixins(CtCard)
           <div class="d-flex grow flex-wrap">
             <VSheet
               dark={true}
-              color={this.headerColor}
+              color={this.chartColor}
               class="text-start ct-card--material__heading mb-n6 pa-7"
               style="width: 100%;"
             >
@@ -65,5 +69,22 @@ export default mixins(CtCard)
           </div>
         );
       }
+    },
+    render(h) {
+      const { tag, data } = this.generateRouteLink();
+      data.style = this.styles;
+
+      if (this.isClickable) {
+        data.attrs = data.attrs || {};
+        data.attrs.tabindex = 0;
+      }
+
+      return h(tag, this.setBackgroundColor(this.color, data), [
+        this.getHeader(h),
+        this.genProgress(),
+        h(VCardText, [this.$slots.default]),
+        this.$slots.actions ? h(VDivider, { class: "mt-2" }) : null,
+        this.$slots.actions ? h(VCardActions, [this.$slots.actions]) : null
+      ]);
     }
   });

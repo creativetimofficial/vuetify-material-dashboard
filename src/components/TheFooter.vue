@@ -1,7 +1,7 @@
 <template>
-  <v-footer color="transparent">
+  <v-footer app inset absolute color="transparent" width="auto" height="auto">
     <v-container>
-      <v-row align="center" no-gutters>
+      <v-row align="center">
         <v-col
           v-for="link in links"
           :key="link.name"

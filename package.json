@@ -15,9 +15,9 @@
     "vue": "^2.6.10",
     "vue-analytics": "^5.17.0",
     "vue-chartist": "^2.2.1",
-    "vue-meta": "2.3.0",
+    "vue-meta": "2.2.2",
     "vue-router": "^3.0.3",
-    "vuetify": "2.0.11",
+    "vuetify": "^2.1.5",
     "vuex": "^3.0.1",
     "vuex-router-sync": "^5.0.0"
   },

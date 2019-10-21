@@ -2,14 +2,14 @@
   <v-container class="fill-height" fluid>
     <v-row align="center" justify="center">
       <v-col cols="12">
-        <material-card color="success">
+        <ct-card header-color="success">
           <template v-slot:header>
             <div class="px-3">
               <div class="title font-weight-light mb-2">
                 Notifications
               </div>
 
-              <div class="category">
+              <div class="subtitle-1 font-weight-light">
                 Handcrafted by us with
                 <v-icon size="17">
                   mdi-heart
@@ -25,24 +25,24 @@
                   Notifications Style
                 </h2>
 
-                <material-notification class="mb-3" color="info">
+                <ct-notification class="mb-3" color="info">
                   This is a plain notification
-                </material-notification>
+                </ct-notification>
 
-                <material-notification class="mb-3" color="info" dismissible>
+                <ct-notification class="mb-3" color="info" dismissible>
                   This is a notification with close button.
-                </material-notification>
+                </ct-notification>
 
-                <material-notification
+                <ct-notification
                   class="mb-3"
                   color="info"
                   dismissible
-                  icon="mdi-bell-plus"
+                  icon="mdi-bell"
                 >
                   This is a notification with close button and icon.
-                </material-notification>
+                </ct-notification>
 
-                <material-notification
+                <ct-notification
                   class="mb-3"
                   color="info"
                   dismissible
@@ -52,7 +52,7 @@
                   many lines. You can see that the icon and the close button are
                   always vertically aligned. This is a beautiful notification.
                   So you don't have to worry about the style.
-                </material-notification>
+                </ct-notification>
               </v-col>
 
               <v-col cols="12" md="6">
@@ -60,30 +60,30 @@
                   Notifcation States
                 </h2>
 
-                <material-notification class="mb-3" color="info" dismissible>
+                <ct-notification class="mb-3" color="info" dismissible>
                   <strong>INFO</strong> - This is a regular notification made
                   with `color="info"`
-                </material-notification>
+                </ct-notification>
 
-                <material-notification class="mb-3" color="success" dismissible>
+                <ct-notification class="mb-3" color="success" dismissible>
                   <strong>SUCCESS</strong> - This is a regular notification made
                   with `color="success"`
-                </material-notification>
+                </ct-notification>
 
-                <material-notification class="mb-3" color="warning" dismissible>
+                <ct-notification class="mb-3" color="warning" dismissible>
                   <strong>WARNING</strong> - This is a regular notification made
                   with `color="warning"`
-                </material-notification>
+                </ct-notification>
 
-                <material-notification class="mb-3" color="error" dismissible>
+                <ct-notification class="mb-3" color="error" dismissible>
                   <strong>DANGER</strong> - This is a regular notification made
                   with `color="error"`
-                </material-notification>
+                </ct-notification>
 
-                <material-notification class="mb-3" color="purple" dismissible>
+                <ct-notification class="mb-3" color="purple" dismissible>
                   <strong>PRIMARY</strong> - This is a regular notification made
                   with `color="purple"`
-                </material-notification>
+                </ct-notification>
               </v-col>
             </v-row>
 
@@ -167,7 +167,7 @@
               </v-btn>
             </v-snackbar>
           </v-card-text>
-        </material-card>
+        </ct-card>
       </v-col>
     </v-row>
   </v-container>

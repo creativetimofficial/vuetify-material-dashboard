@@ -47,6 +47,7 @@ export default mixins(VCard)
       classes() {
         return {
           ...VCard.options.computed.classes.call(this),
+          "ct-card": true,
           "ct-stats-card": true
         };
       }

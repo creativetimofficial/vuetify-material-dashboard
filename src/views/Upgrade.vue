@@ -2,10 +2,10 @@
   <v-container>
     <v-row justify="center">
       <v-col cols="12" sm="10" md="8">
-        <material-card
-          color="primary"
-          title="Vue Material Dashboard PRO"
-          text="Are you looking for more components? Please check our Premium Version of Vue Material Dashboard."
+        <ct-card
+          header-color="primary"
+          header-title="Vue Material Dashboard PRO"
+          header-text="Are you looking for more components? Please check our Premium Version of Vue Material Dashboard."
         >
           <table class="v-table">
             <thead>
@@ -105,7 +105,7 @@
               </tr>
             </tbody>
           </table>
-        </material-card>
+        </ct-card>
       </v-col>
     </v-row>
   </v-container>

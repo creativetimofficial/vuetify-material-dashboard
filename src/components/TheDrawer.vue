@@ -1,10 +1,18 @@
 <template>
-  <ct-navigation-drawer
+  <v-navigation-drawer
+    app
+    dark
     v-model="inputValue"
     :src="image"
     mobile-break-point="991"
     width="260"
   >
+    <template v-slot:img="attrs">
+      <v-img
+        v-bind="attrs"
+        gradient="to top, rgba(0, 0, 0, .8), rgba(0, 0, 0, .8)"
+      />
+    </template>
     <v-list-item two-line>
       <v-list-item-avatar color="white">
         <v-img
@@ -52,7 +60,7 @@
         </v-list-item>
       </v-list>
     </template>
-  </ct-navigation-drawer>
+  </v-navigation-drawer>
 </template>
 
 <script>

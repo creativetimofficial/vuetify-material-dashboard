@@ -27,8 +27,7 @@ export default mixins(VCard)
       classes() {
         return {
           ...VCard.options.computed.classes.call(this),
-          "ct-card": true,
-          "ct-card--material--has-heading": this.hasHeader
+          "ct-card": true
         };
       }
     },
@@ -40,7 +39,7 @@ export default mixins(VCard)
             <VSheet
               dark={true}
               color={this.headerColor}
-              class="text-start ct-card--material__heading mb-n6 pa-7"
+              class="text-start ct-card--material__heading mb-n6 pa-7 relative"
               style="width: 100%;"
             >
               {this.getSlotHeader(h)}
