@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "chartist": "0.11.0",
-    "node-sass": "4.9.3",
+    "node-sass": "4.12.0",
     "sass-loader": "7.1.0",
     "vue": "2.5.22",
     "vue-chartist": "2.1.2",
