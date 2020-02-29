@@ -1,4 +1,5 @@
 module.exports = {
+  publicPath: "/vuetify-material-dashboard/",
   devServer: {
     disableHostCheck: true,
   },
