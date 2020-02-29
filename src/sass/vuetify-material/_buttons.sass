@@ -1,0 +1,67 @@
+.v-btn.v-size--default
+  font-size: .85rem
+
+.v-icon.v-icon
+  font-size: 20px
+
+.v-btn__content .v-icon--left
+  margin-right: 4px
+
+.v-sheet button.v-btn.v-size--default:not(.v-btn--icon):not(.v-btn--fab)
+  padding: 12px 30px !important
+
+.theme--light.v-btn:not(.v-btn--flat):not(.v-btn--text):not(.v-btn--outlined)
+  background-color: #999
+  color: #fff
+  &:hover
+    background-color: #999
+    color: #fff
+
+.v-btn.white
+  .v-btn__content
+    color: #999
+
+.v-sheet .v-btn.v-size--large:not(.v-btn--icon):not(.v-btn--fab)
+  padding: 18px 36px !important
+
+.v-btn--fab.v-size--small
+  height: 41px
+  width: 41px
+
+.v-btn:not(.v-btn--text):not(.v-btn--outlined):hover:before
+  opacity: 0
+
+.v-btn:not(.v-btn--text):not(.v-btn--outlined):focus:before
+    opacity: 0
+
+.v-btn.v-size--default:not(.v-btn--icon):not(.v-btn--fab),
+.v-btn.v-size--large:not(.v-btn--icon):not(.v-btn--fab)
+  padding: 10px 15px !important
+
+// Button group
+
+.v-item-group
+  .v-btn:not(.v-btn--flat):not(.v-btn--text):not(.v-btn--outlined)
+    margin-right: 0
+
+.v-btn-toggle
+  .v-btn
+    opacity: 1
+
+.v-btn-toggle > .v-btn.v-size--default
+   height: inherit
+
+.theme--light.v-btn-toggle .v-btn.v-btn
+  border-color: #999 !important
+  &.primary
+    border-color: #e91e63 !important
+  &.secondary
+    border-color: #9c27b0 !important
+  &.success
+    border-color: #4caf50 !important
+  &.warning
+    border-color: #fb8c00 !important
+  &.error
+    border-color: #ff5252 !important
+  &.info
+    border-color: #00cae3 !important
