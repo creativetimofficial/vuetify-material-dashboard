@@ -68,4 +68,7 @@
     .v-snack__content
       overflow: visible
       padding: 0
+
+  .v-snack__action
+    margin-right: 0px !important
 </style>
