@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import Vuetify from 'vuetify/lib'
+import { Ripple } from 'vuetify/lib/directives'
 import i18n from '@/i18n'
 import '@/sass/overrides.sass'
 
@@ -21,5 +22,8 @@ export default new Vuetify({
       dark: theme,
       light: theme,
     },
+  },
+  directives: {
+    Ripple,
   },
 })
