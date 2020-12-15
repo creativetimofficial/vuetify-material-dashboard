@@ -117,7 +117,7 @@
                   @click="toggle"
                 >
                   <v-img
-                    :src="image"
+                    :src="require(`@/assets/drawer/${image}`)"
                     height="100"
                     width="50"
                   />
@@ -204,12 +204,12 @@
         '#E91E63',
         '#FF5252',
       ],
-      image: 'https://demos.creative-tim.com/material-dashboard/assets/img/sidebar-1.jpg',
+      image: 'sidebar-1.jpg',
       images: [
-        'https://demos.creative-tim.com/material-dashboard/assets/img/sidebar-1.jpg',
-        'https://demos.creative-tim.com/material-dashboard/assets/img/sidebar-2.jpg',
-        'https://demos.creative-tim.com/material-dashboard/assets/img/sidebar-3.jpg',
-        'https://demos.creative-tim.com/material-dashboard/assets/img/sidebar-4.jpg',
+        'sidebar-1.jpg',
+        'sidebar-2.jpg',
+        'sidebar-3.jpg',
+        'sidebar-4.jpg',
       ],
       menu: false,
       saveImage: '',
