@@ -113,7 +113,7 @@
         },
         {
           icon: 'mdi-view-dashboard',
-          title: 'dashboard',
+          title: 'Productos',
           to: '/',
         },
         {
