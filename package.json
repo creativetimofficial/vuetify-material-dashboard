@@ -13,6 +13,7 @@
     "test:unit": "vue-cli-service test:unit"
   },
   "dependencies": {
+    "axios": "^0.21.1",
     "core-js": "^3.6.2",
     "vue": "^2.6.11",
     "vue-i18n": "^8.15.3",
