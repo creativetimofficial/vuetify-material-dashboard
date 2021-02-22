@@ -112,6 +112,11 @@
           to: '/',
         },
         {
+          icon: 'mdi-view-dashboard',
+          title: 'dashboard',
+          to: '/',
+        },
+        {
           icon: 'mdi-account',
           title: 'user',
           to: '/pages/user',
