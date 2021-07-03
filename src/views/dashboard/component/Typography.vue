@@ -18,11 +18,11 @@
           color="green"
         >
           <template v-slot:heading>
-            <div class="display-2 font-weight-light">
+            <div class="text-h3 font-weight-light">
               Material Dashboard Heading
             </div>
 
-            <div class="subtitle-1 font-weight-light">
+            <div class="text-subtitle-1 font-weight-light">
               Created using Roboto Font Family
             </div>
           </template>

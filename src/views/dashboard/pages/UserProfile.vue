@@ -11,11 +11,11 @@
       >
         <base-material-card>
           <template v-slot:heading>
-            <div class="display-2 font-weight-light">
+            <div class="text-h3 font-weight-light">
               Edit Profile
             </div>
 
-            <div class="subtitle-1 font-weight-light">
+            <div class="text-subtitle-1 font-weight-light">
               Complete your profile
             </div>
           </template>
@@ -145,11 +145,11 @@
           avatar="https://demos.creative-tim.com/vue-material-dashboard/img/marc.aba54d65.jpg"
         >
           <v-card-text class="text-center">
-            <h6 class="display-1 mb-1 grey--text">
+            <h6 class="text-h4 mb-1 grey--text">
               CEO / CO-FOUNDER
             </h6>
 
-            <h4 class="display-2 font-weight-light mb-3 black--text">
+            <h4 class="text-h3 font-weight-light mb-3 black--text">
               Alec Thompson
             </h4>
 

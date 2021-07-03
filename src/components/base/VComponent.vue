@@ -1,12 +1,12 @@
 <template>
   <section class="mb-12 text-center">
     <h1
-      class="font-weight-light mb-2 headline"
+      class="font-weight-light mb-2 text-h5"
       v-text="`Vuetify ${heading}`"
     />
 
     <span
-      class="font-weight-light subtitle-1"
+      class="font-weight-light text-subtitle-1"
     >
       Please checkout the
       <a
