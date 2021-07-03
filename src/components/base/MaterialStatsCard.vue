@@ -12,7 +12,7 @@
           v-text="title"
         />
 
-        <h3 class="display-2 font-weight-light text--primary">
+        <h3 class="text-h3 font-weight-light text--primary">
           {{ value }} <small>{{ smallValue }}</small>
         </h3>
       </div>
@@ -35,7 +35,7 @@
 
     <span
       :class="subTextColor"
-      class="caption grey--text font-weight-light"
+      class="text-caption grey--text font-weight-light"
       v-text="subText"
     />
   </base-material-card>

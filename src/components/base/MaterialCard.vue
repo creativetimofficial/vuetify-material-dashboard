@@ -38,7 +38,7 @@
 
         <div
           v-else-if="title && !icon"
-          class="display-1 font-weight-light"
+          class="text-h4 font-weight-light"
           v-text="title"
         />
 
@@ -50,7 +50,7 @@
 
         <div
           v-if="text"
-          class="headline font-weight-thin"
+          class="text-h5 font-weight-thin"
           v-text="text"
         />
       </v-sheet>

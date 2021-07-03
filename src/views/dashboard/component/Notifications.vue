@@ -247,7 +247,7 @@
           </v-icon>
         </v-card-title>
 
-        <v-card-text class="body-1 text-center">
+        <v-card-text class="text-body-1 text-center">
           <v-row>
             <v-col
               cols="12"

@@ -10,17 +10,17 @@
     </div>
 
     <v-card-text
-      class="display-1 font-weight-light font-italic mb-3"
+      class="text-h4 font-weight-light font-italic mb-3"
       v-text="blurb"
     />
 
     <div
-      class="display-2 font-weight-light mb-2"
+      class="text-h3 font-weight-light mb-2"
       v-text="author"
     />
 
     <div
-      class="body-2 text-uppercase grey--text"
+      class="text-body-2 text-uppercase grey--text"
       v-text="handle"
     />
 
