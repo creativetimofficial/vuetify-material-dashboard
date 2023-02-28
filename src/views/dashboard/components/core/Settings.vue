@@ -1,5 +1,5 @@
 <template>
-  <div id="settings-wrapper">
+  <ddiv id="settings-wrapper">
     <v-card
       id="settings"
       class="py-2 px-4"
