@@ -11,18 +11,18 @@
 </template>
 
 <script>
-  export default {
-    name: 'DashboardIndex',
+export default {
+	name: 'DashboardIndex',
 
-    components: {
-      DashboardCoreAppBar: () => import('./components/core/AppBar'),
-      DashboardCoreDrawer: () => import('./components/core/Drawer'),
-      DashboardCoreSettings: () => import('./components/core/Settings'),
-      DashboardCoreView: () => import('./components/core/View'),
-    },
+	components: {
+		DashboardCoreAppBar: () => import('./components/core/AppBar'),
+		DashboardCoreDrawer: () => import('./components/core/Drawer'),
+		DashboardCoreSettings: () => import('./components/core/Settings'),
+		DashboardCoreView: () => import('./components/core/View'),
+	},
 
-    data: () => ({
-      expandOnHover: false,
-    }),
-  }
+	data: () => ({
+		expandOnHover: false,
+	}),
+}
 </script>

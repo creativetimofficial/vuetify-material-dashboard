@@ -4,7 +4,7 @@
     v-bind="$attrs"
     v-on="$listeners"
   >
-    <template v-slot:heading>
+    <template #heading>
       <chartist
         :data="data"
         :event-handlers="eventHandlers"
@@ -31,39 +31,39 @@
 </template>
 
 <script>
-  export default {
-    name: 'MaterialChartCard',
+export default {
+	name: 'MaterialChartCard',
 
-    inheritAttrs: false,
+	inheritAttrs: false,
 
-    props: {
-      data: {
-        type: Object,
-        default: () => ({}),
-      },
-      eventHandlers: {
-        type: Array,
-        default: () => ([]),
-      },
-      options: {
-        type: Object,
-        default: () => ({}),
-      },
-      ratio: {
-        type: String,
-        default: undefined,
-      },
-      responsiveOptions: {
-        type: Array,
-        default: () => ([]),
-      },
-      type: {
-        type: String,
-        required: true,
-        validator: v => ['Bar', 'Line', 'Pie'].includes(v),
-      },
-    },
-  }
+	props: {
+		data: {
+			type: Object,
+			default: () => ({}),
+		},
+		eventHandlers: {
+			type: Array,
+			default: () => ([]),
+		},
+		options: {
+			type: Object,
+			default: () => ({}),
+		},
+		ratio: {
+			type: String,
+			default: undefined,
+		},
+		responsiveOptions: {
+			type: Array,
+			default: () => ([]),
+		},
+		type: {
+			type: String,
+			required: true,
+			validator: v => ['Bar', 'Line', 'Pie'].includes(v),
+		},
+	},
+}
 </script>
 
 <style lang="sass">

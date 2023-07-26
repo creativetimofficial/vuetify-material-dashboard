@@ -13,21 +13,21 @@
 </template>
 
 <script>
-  // Mixins
-  import Proxyable from 'vuetify/lib/mixins/proxyable'
+// Mixins
+import Proxyable from 'vuetify/lib/mixins/proxyable'
 
-  export default {
-    name: 'MaterialTabs',
+export default {
+	name: 'MaterialTabs',
 
-    mixins: [Proxyable],
+	mixins: [Proxyable],
 
-    props: {
-      color: {
-        type: String,
-        default: 'primary',
-      },
-    },
-  }
+	props: {
+		color: {
+			type: String,
+			default: 'primary',
+		},
+	},
+}
 </script>
 
 <style lang="sass">
