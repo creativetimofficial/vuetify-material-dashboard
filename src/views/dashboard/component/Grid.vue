@@ -284,17 +284,17 @@
 </template>
 
 <script>
-  export default {
-    name: 'DashboardGrid',
+export default {
+	name: 'DashboardGrid',
 
-    components: {
-      ParagraphHeading: {
-        render (h) {
-          return h('div', {
-            class: 'headline font-weight-light col cols-12',
-          }, this.$slots.default)
-        },
-      },
-    },
-  }
+	components: {
+		ParagraphHeading: {
+			render (h) {
+				return h('div', {
+					class: 'headline font-weight-light col cols-12',
+				}, this.$slots.default)
+			},
+		},
+	},
+}
 </script>

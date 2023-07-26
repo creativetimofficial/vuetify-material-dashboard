@@ -1,12 +1,11 @@
 <template>
-  <div class="display-2 font-weight-light col col-12 text-left text--primary pa-0 mb-8">
+  <div
+    class="text-h3 font-weight-light col col-12 text-left text--primary pa-0 mb-8"
+  >
     <h5 class="font-weight-light">
       {{ subheading }}
       <template v-if="text">
-        <span
-          class="subtitle-1"
-          v-text="text"
-        />
+        <span class="text-subtitle-1" v-text="text" />
       </template>
     </h5>
 
@@ -17,18 +16,18 @@
 </template>
 
 <script>
-  export default {
-    name: 'Subheading',
+export default {
+	name: "Subheading",
 
-    props: {
-      subheading: {
-        type: String,
-        default: '',
-      },
-      text: {
-        type: String,
-        default: '',
-      },
-    },
-  }
+	props: {
+		subheading: {
+			type: String,
+			default: "",
+		},
+		text: {
+			type: String,
+			default: "",
+		},
+	},
+};
 </script>
